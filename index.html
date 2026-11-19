@@ -64,11 +64,11 @@ a{color:inherit}
 /* ---------- topbalk ---------- */
 .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0}
 .brand-logo{display:flex;align-items:center;gap:.75rem;flex:none;text-decoration:none}
-.brand-logo img{display:block;height:60px;width:auto}
+.brand-logo img{display:block;height:54px;width:auto}
 .brand-txt{display:grid;gap:.3rem}
-.brand-name{font:400 1.3rem/1 var(--serif);letter-spacing:.14em;text-transform:uppercase;color:var(--forest)}
+.brand-name{font:400 1.25rem/1 var(--serif);letter-spacing:.14em;text-transform:uppercase;color:var(--forest);padding-top:.2rem}
 .brand-sub{font:italic 400 .82rem/1 var(--serif);color:var(--resin-ink)}
-@media (max-width:40rem){.brand-logo img{height:46px}.brand-txt{display:none}}
+@media (max-width:40rem){.brand-logo img{height:46px}.brand-name{display:none}}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 .78rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase}
 .nav{display:flex;gap:1.25rem;font-size:.9rem}
 .nav a{color:var(--muted)}
@@ -275,6 +275,13 @@ a{color:inherit}
 .connect{margin-top:3rem}
 .connect h3{margin:0 0 .75rem;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .connect p{max-width:38rem;margin:0 0 .9rem}
+.more-btn{display:none}
+@media (max-width:40rem){
+  .js .foldable:not(.open) .more-p{display:none}
+  .js .more-btn{display:inline-flex;align-items:center;gap:.4rem;margin:.1rem 0 1rem;padding:.5rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--forest);font:600 .88rem var(--sans);cursor:pointer}
+  .js .more-btn::after{content:"93"}
+  .js .foldable.open .more-btn::after{content:"91"}
+}
 .health .b-chips{max-width:38rem;margin-top:1.1rem}
 .sign{font-family:var(--serif);font-style:italic;color:var(--forest);font-size:1.15rem}
 .disciplines{margin:2.5rem 0 0;display:grid;gap:0 2rem}
@@ -366,7 +373,7 @@ footer p{margin:0}
 <div class="hero-shell">
 <div class="wrap">
   <div class="top">
-    <a class="brand-logo" href="./" aria-label="Domein Stam, naar het begin"><img src="img/logo/boom-logo.svg" width="284" height="352" alt=""><span class="brand-txt"><span class="brand-name">Domein Stam</span><span class="brand-sub">Meedenken. Verbeteren. Realiseren.</span></span></a>
+    <a class="brand-logo" href="./" aria-label="Domein Stam, naar het begin"><img src="img/logo/boom-logo.svg" width="284" height="352" alt=""><span class="brand-name">Domein Stam</span></a>
     <nav class="nav" aria-label="Hoofdmenu">
       <a class="ul" href="#helpen">Waarmee ik help</a>
       <a class="ul opt" href="#verhaal">Verhaal</a>
@@ -437,18 +444,20 @@ footer p{margin:0}
 {% for h in t.verhaal.hoofdstukken %}            <li class="reveal"><h3>{{ h.titel | escape }}</h3><p>{{ h.tekst | escape }}</p></li>
 {% endfor %}          </ol>
 
-{% if t.gezondheid.titel and t.gezondheid.titel != "" %}          <div class="connect health reveal">
+{% if t.gezondheid.titel and t.gezondheid.titel != "" %}          <div class="connect health foldable reveal">
             <h3>{{ t.gezondheid.titel | escape }}</h3>
-{% for a in t.gezondheid.alineas %}            <p>{{ a | escape }}</p>
-{% endfor %}{% if t.gezondheid.onderwerpen.size > 0 %}            <ul class="b-chips" aria-label="Onderwerpen die mij interesseren">
+{% for a in t.gezondheid.alineas %}            <p{% unless forloop.first %} class="more-p"{% endunless %}>{{ a | escape }}</p>
+{% endfor %}{% if t.gezondheid.alineas.size > 1 %}            <button class="more-btn" type="button" aria-expanded="false">Lees verder</button>
+{% endif %}{% if t.gezondheid.onderwerpen.size > 0 %}            <ul class="b-chips" aria-label="Onderwerpen die mij interesseren">
               {% for o in t.gezondheid.onderwerpen %}<li>{{ o | escape }}</li>{% endfor %}
             </ul>
 {% endif %}          </div>
 {% endif %}
-          <div class="connect reveal">
+          <div class="connect foldable reveal">
             <h3>{{ t.verhaal.verbindt_titel | escape }}</h3>
-{% for a in t.verhaal.verbindt_alineas %}            <p>{{ a | escape }}</p>
-{% endfor %}            <p class="sign">{{ t.verhaal.verbindt_slogan | escape }}</p>
+{% for a in t.verhaal.verbindt_alineas %}            <p{% unless forloop.first %} class="more-p"{% endunless %}>{{ a | escape }}</p>
+{% endfor %}{% if t.verhaal.verbindt_alineas.size > 1 %}            <button class="more-btn" type="button" aria-expanded="false">Lees verder</button>
+{% endif %}            <p class="sign">{{ t.verhaal.verbindt_slogan | escape }}</p>
           </div>
 
           <dl class="disciplines reveal">
@@ -617,6 +626,7 @@ footer p{margin:0}
 <script>
 (function(){
   var d=document.documentElement; d.classList.add('js');
+  document.querySelectorAll('.more-btn').forEach(function(b){b.addEventListener('click',function(){var f=b.closest('.foldable');var o=f.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Minder tonen':'Lees verder';});});
   var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els=document.querySelectorAll('.reveal');
   if(calm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}

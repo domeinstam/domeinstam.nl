@@ -17,7 +17,14 @@
 <meta property="og:title" content="{{ t.pagina.deel_titel | escape }}">
 <meta property="og:description" content="{{ t.pagina.deel_beschrijving | escape }}">
 <meta property="og:url" content="https://domeinstam.nl/">
-<link rel="icon" href="data:,">
+<meta property="og:image" content="https://domeinstam.nl/img/logo/deelafbeelding.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Domein Stam: een boom met de naam Domein Stam">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo/icoon.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo/icoon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/logo/icoon-180.png">
 <meta name="theme-color" content="#F4EFE5">
 <style>
 :root{
@@ -247,6 +254,7 @@ a{color:inherit}
 .portrait-rings .ring-hars{stroke:var(--resin);stroke-width:1.6;opacity:.75}
 .mono{position:relative;font:400 5.5rem/1 var(--serif);letter-spacing:-.03em}
 .mono i{color:var(--resin)}
+.mono-tree{position:relative;width:34%;height:auto;margin-top:-6%}
 .portrait figcaption{position:absolute;left:1.25rem;bottom:1.1rem;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
 .intro{margin:0;font:400 clamp(1.6rem,3.2vw,2.2rem)/1.18 var(--serif);letter-spacing:-.01em}
 .intro em{color:var(--resin-ink)}
@@ -388,7 +396,7 @@ footer p{margin:0}
 <path class="ring" data-i="9" d="M452.0 250.0L451.4 263.2L450.1 276.3L448.2 289.4L445.6 302.4L442.5 315.3L438.6 328.1L433.9 340.7L428.4 353.0L422.0 365.0L414.8 376.4L406.7 387.4L397.7 397.7L388.1 407.4L377.7 416.4L366.7 424.7L355.2 432.3L343.2 439.1L330.8 445.1L318.0 450.2L304.8 454.4L291.3 457.6L277.6 459.8L263.8 460.9L250.0 460.9L236.2 459.9L222.6 457.9L209.2 455.1L196.0 451.4L183.2 446.9L170.6 441.8L158.3 436.0L146.3 429.6L134.7 422.5L123.6 414.8L112.9 406.3L102.8 397.2L93.4 387.3L84.7 376.8L76.8 365.7L69.6 354.1L63.3 342.1L57.7 329.7L52.9 316.9L48.9 303.9L45.7 290.6L43.4 277.2L42.0 263.6L41.5 250.0L42.0 236.4L43.6 222.8L46.2 209.5L49.9 196.4L54.4 183.6L59.8 171.2L66.0 159.3L72.8 147.7L80.3 136.6L88.2 125.9L96.7 115.6L105.8 105.8L115.3 96.4L125.4 87.6L136.1 79.5L147.2 72.0L158.9 65.2L171.0 59.2L183.5 54.0L196.3 49.5L209.4 45.8L222.7 42.9L236.3 40.8L250.0 39.5L263.8 39.0L277.7 39.5L291.6 41.0L305.3 43.5L318.9 47.1L332.1 51.9L344.8 57.8L357.0 64.7L368.6 72.5L379.5 81.3L389.7 90.7L399.2 100.8L407.9 111.5L416.0 122.6L423.3 134.2L429.9 146.2L435.6 158.5L440.5 171.1L444.5 184.0L447.7 197.0L450.0 210.2L451.4 223.5L452.1 236.8Z"/>
 <path class="ring" data-i="10" d="M477.5 250.0L475.3 264.8L472.4 279.3L468.9 293.5L464.9 307.6L460.3 321.4L455.3 335.1L449.8 348.5L443.6 361.8L436.6 374.7L428.8 387.2L420.1 399.2L410.5 410.5L400.1 421.2L389.0 431.2L377.2 440.4L364.9 449.0L352.0 456.9L338.7 464.2L324.9 470.7L310.7 476.5L296.0 481.4L281.0 485.3L265.6 487.9L250.0 489.1L234.3 489.0L218.7 487.4L203.4 484.5L188.3 480.3L173.6 475.1L159.3 468.9L145.5 461.9L132.1 454.2L119.2 445.8L106.8 436.6L94.9 426.8L83.8 416.2L73.4 404.9L64.0 392.7L55.5 380.0L48.1 366.6L41.7 352.7L36.3 338.5L31.8 324.1L28.1 309.5L25.1 294.7L22.8 279.9L21.2 265.0L20.5 250.0L20.6 235.0L21.8 220.0L24.1 205.1L27.6 190.4L32.2 176.1L38.1 162.2L44.9 148.9L52.6 136.0L61.1 123.7L70.1 112.0L79.7 100.7L89.8 89.8L100.4 79.4L111.6 69.6L123.3 60.4L135.6 51.9L148.6 44.4L162.1 37.7L176.0 32.1L190.4 27.5L205.0 23.9L219.9 21.2L234.9 19.3L250.0 18.1L265.2 17.7L280.5 18.0L295.9 19.2L311.3 21.2L326.6 24.4L341.6 28.8L356.3 34.5L370.4 41.5L383.8 49.7L396.5 59.1L408.3 69.5L419.3 80.7L429.4 92.7L438.6 105.2L447.1 118.3L454.7 131.8L461.5 145.7L467.2 160.0L471.9 174.7L475.4 189.6L477.7 204.7L478.8 219.9L478.7 235.0Z"/>
             </svg>
-      <span class="mono" aria-hidden="true">R<i>S</i></span>
+      <img class="mono-tree" src="img/logo/boom-licht.svg" width="284" height="352" alt="" aria-hidden="true">
       <figcaption>Rens Stam</figcaption>
     </figure>
   </header>

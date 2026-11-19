@@ -221,30 +221,6 @@ collections:
                   - { label: Titel, name: titel, widget: string }
                   - { label: Tekst, name: tekst, widget: string }
 
-          - label: App – Only Sun
-            name: onlysun
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Label, name: label, widget: string }
-              - { label: Status, name: status, widget: string }
-              - { label: Naam, name: naam, widget: string }
-              - { label: Slogan, name: slogan, widget: string }
-              - label: Alinea's
-                name: alineas
-                widget: list
-                label_singular: alinea
-                field: { label: Alinea, name: alinea, widget: text }
-              - { label: Tekst bij het slotje, name: slot, widget: string }
-              - label: Stappen
-                name: stappen
-                widget: list
-                label_singular: stap
-                summary: "{{fields.titel}}"
-                fields:
-                  - { label: Titel, name: titel, widget: string }
-                  - { label: Tekst, name: tekst, widget: string }
-
           - label: 04 Contact
             name: contact
             widget: object

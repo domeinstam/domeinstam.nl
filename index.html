@@ -560,23 +560,6 @@ footer p{margin:0}
 {% endfor %}        </ol>
       </article>
 
-      <article class="biz sun reveal">
-        <svg class="sun-art" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><g fill="none" stroke="#E3A73A" stroke-width="1.5"><circle cx="150" cy="150" r="140" opacity=".35"/><circle cx="150" cy="150" r="116" opacity=".45"/><circle cx="150" cy="150" r="92" opacity=".6"/><circle cx="150" cy="150" r="70" opacity=".8"/></g><circle cx="150" cy="150" r="48" fill="#F2B53C"/></svg>
-        <div>
-          <ul class="tags"><li class="tag">{{ t.onlysun.label | escape }}</li><li class="tag status">{{ t.onlysun.status | escape }}</li></ul>
-          <h3>{{ t.onlysun.naam | escape }}</h3>
-          <p class="slogan">{{ t.onlysun.slogan | escape }}</p>
-{% for a in t.onlysun.alineas %}          <p class="desc">{{ a | escape }}</p>
-{% endfor %}          <div>
-            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{{ t.onlysun.slot | escape }}</span>
-          </div>
-          <ol class="flow" aria-label="Zo werkt Only Sun">
-{% for s in t.onlysun.stappen %}            <li><div><b>{{ s.titel | escape }}</b><span>{{ s.tekst | escape }}</span></div></li>
-{% endfor %}          </ol>
-        </div>
-        <figure class="phone"><img src="img/onlysun.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Voorbeeld van Only Sun op een telefoon: de zon levert 4,9 kW, waarvan 4,2 kW naar de auto gaat."></figure>
-      </article>
-
     </div>
   </section>
 

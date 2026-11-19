@@ -160,24 +160,6 @@ antwoorden:
       tekst: Het concept wordt nagelopen op de huisregels.
     - titel: Medewerker
       tekst: Past het antwoord waar nodig aan en neemt het over.
-onlysun:
-  label: Zonne-energie
-  status: Eigen gebruik
-  naam: Only Sun
-  slogan: Laden op de zon.
-  alineas:
-    - 'Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger.'
-    - 'Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster.'
-  slot: Draait lokaal · niet openbaar
-  stappen:
-    - titel: Zon meten
-      tekst: Wat de panelen opwekken en het huis verbruikt.
-    - titel: Overschot berekenen
-      tekst: Hoeveel zonnestroom er over is voor de auto.
-    - titel: Meebewegen
-      tekst: De laadpaal laadt mee met de zon.
-    - titel: Nacht
-      tekst: Wat de zon niet haalt, volgt 's nachts volgens plan.
 contact:
   titel: Kennismaken?
   titel_accent: Functie, Project of Samenwerking?

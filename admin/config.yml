@@ -94,6 +94,23 @@ collections:
                   - { label: Titel, name: titel, widget: string }
                   - { label: Tekst, name: tekst, widget: string }
 
+          - label: 02 Gezondheid als rode draad (blok in Mijn verhaal)
+            name: gezondheid
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Kop van het blok (leeg = blok niet tonen)", name: titel, widget: string, required: false }
+              - label: Alinea's
+                name: alineas
+                widget: list
+                label_singular: alinea
+                field: { label: Alinea, name: alinea, widget: text }
+              - label: Onderwerpen (labels onder de tekst)
+                name: onderwerpen
+                widget: list
+                label_singular: onderwerp
+                field: { label: Onderwerp, name: onderwerp, widget: string }
+
           - label: 03 Projecten (koppen)
             name: projecten
             widget: object

@@ -7,7 +7,7 @@ intro:
   kicker: Meedenken. Verbeteren. Realiseren.
   naam: Rens Stam
   ondertitel: Ondernemend. Organisator. Probleemoplosser.
-  tekst: Ik leerde ondernemen op de winkelvloer van mijn eigen drogisterij en bouwde daarna aan webshops, merken en digitale toepassingen. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ik ga daarbij graag zelf aan de slag.
+  tekst: Ondernemen leerde ik op de winkelvloer van mijn eigen drogisterij. Daarna bouwde ik aan webshops, merken en digitale toepassingen, met gezondheid als rode draad. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ga daarbij graag zelf aan de slag.
   beschikbaar: ''
   knop_kennismaken: Kennismaken
   knop_helpen: Waarmee ik help
@@ -45,13 +45,13 @@ verhaal:
     - titel: De merken
       tekst: Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij.
     - titel: Digitale innovatie
-      tekst: Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen, zoals Atempo, Restavia, Only Sun en Antwoorden Adviesdrogisterij.nl.
+      tekst: 'Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen: voor het bedrijf, zoals Antwoorden Adviesdrogisterij.nl, en vanuit eigen interesse, zoals Atempo, Restavia en Only Sun.'
   verbindt_titel: Wat alles verbindt
   verbindt_alineas:
-    - Mijn achtergrond ligt in de detailhandel en e-commerce, met inmiddels twintig jaar ervaring in de gezondheidsbranche. Daarnaast heb ik een juridische opleiding gevolgd en beschik ik over een brede, praktische IT-achtergrond. Ook heb ik uitgebreide kennis van gezondheid, leefstijl en natuurgeneeswijzen.
-    - Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen.
-    - Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen.
-    - Als sparringpartner, organisatieverbeteraar en hands-on professional help ik ondernemers en organisaties bij het aanpakken van vraagstukken en het realiseren van praktische verbeteringen.
+    - 'Mijn achtergrond is breed: ondernemen in detailhandel en e-commerce, een juridische opleiding en een praktische IT-achtergrond. Wat die kanten verbindt, is nieuwsgierigheid.'
+    - Een vraagstuk laat me niet snel los. Ik wil begrijpen hoe iets in elkaar zit, waarom het vastloopt en wat er beter kan. Dat geldt voor een bedrijfsproces net zo goed als voor een nieuw onderwerp waar ik me in vastbijt.
+    - Technologie spreekt me aan omdat je er ideeën snel mee kunt toetsen en omzetten in iets wat werkt. Ik ben geen traditionele programmeur; mijn kracht ligt in het zien van mogelijkheden, het verbinden van disciplines en het afmaken van wat ik begin.
+    - Zo komen zakelijk inzicht, organisatie, juridische zorgvuldigheid en technologie samen, met gezondheid als persoonlijke drijfveer.
   verbindt_slogan: Meedenken. Verbeteren. Realiseren.
   disciplines:
     - titel: Gezondheid
@@ -66,6 +66,20 @@ verhaal:
       tekst: Een brede praktische IT-achtergrond; AI gericht ingezet.
     - titel: Hands-on
       tekst: Van eerste idee tot werkende toepassing.
+gezondheid:
+  titel: Gezondheid als rode draad
+  alineas:
+    - Gezondheid loopt als een rode draad door mijn leven en loopbaan. Twintig jaar in de gezondheidsbranche, waarvan vele jaren met een eigen drogisterij, gaven me een brede basis in zelfzorg, gezondheidsproducten en voedingssupplementen.
+    - 'Mijn belangstelling reikt verder dan het vak. Ook in mijn eigen tijd verdiep ik me in voeding, leefstijl en preventie, natuurgeneeswijzen, beweging, ademhaling en herstel. Vooral de samenhang boeit me: hoe het lichaam werkt en hoe die onderdelen op elkaar inwerken.'
+    - Die nieuwsgierigheid zit ook in mijn digitale projecten. Met Atempo en Restavia onderzoek ik hoe technologie bewegen, herstel en ontspanning praktisch en toegankelijk kan maken. Het zijn eigen projecten in ontwikkeling, geen medische toepassingen.
+  onderwerpen:
+    - Voeding
+    - Leefstijl & preventie
+    - Natuurgeneeswijzen
+    - Beweging
+    - Ademhaling & ontspanning
+    - Herstel
+    - Gezondheid & technologie
 projecten:
   titel: Ondernemingen, merken en projecten
   ondertitel: Voorbeelden van wat ik heb opgebouwd, ontwikkeld en gemaakt.
@@ -118,14 +132,14 @@ atempo:
   status: In ontwikkeling
   naam: Atempo
   slogan: Move. Recover. Grow.
-  tekst: Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.
+  tekst: Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel. Ontstaan uit mijn eigen belangstelling voor bewegen en herstel.
   knop: Open Atempo
 restavia:
   label: Ontspanning
   status: In ontwikkeling
   naam: Restavia
   slogan: Breathe. Feel. Flow.
-  tekst: Een digitale toepassing gericht op ademhaling, humming en ontspanning.
+  tekst: Een digitale toepassing gericht op ademhaling, humming en ontspanning. Voortgekomen uit mijn interesse in ademhaling en rust.
   knop: Open Restavia
 antwoorden:
   status: Zakelijk praktijkvoorbeeld

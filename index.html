@@ -155,7 +155,7 @@ a{color:inherit}
 .biz .fine{font-size:.82rem;color:#A9A396;margin-top:1rem}
 
 .flow{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:.75rem;align-self:center;counter-reset:f}
-.flow::before{content:"";position:absolute;left:1.15rem;top:1.2rem;bottom:1.2rem;width:1.5px;background:linear-gradient(#5C6B5E,#C98A3A)}
+.flow::before{content:"";position:absolute;left:calc(1px + .75rem + .05rem + .8rem - .75px);top:1.2rem;bottom:1.2rem;width:1.5px;background:linear-gradient(#5C6B5E,#C98A3A)}
 .flow li{position:relative;display:grid;grid-template-columns:2.3rem 1fr;gap:.9rem;align-items:start;background:rgba(236,230,218,.05);border:1px solid rgba(236,230,218,.12);border-radius:14px;padding:.8rem 1rem .8rem .75rem}
 .flow li::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:1.6rem;height:1.6rem;margin-left:.05rem;border-radius:50%;background:#17211D;border:1.5px solid #8C9A8E;font:600 .78rem var(--sans);color:#ECE6DA;position:relative;z-index:1}
 .flow b{display:block;font-weight:600;font-size:.95rem}

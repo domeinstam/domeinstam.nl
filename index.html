@@ -583,7 +583,7 @@ footer p{margin:0}
     <div class="wrap contact-grid reveal">
       <div>
         <span class="num">04</span>
-        <h2 id="h-contact">{{ t.contact.titel | escape }} <em>{{ t.contact.titel_accent | escape }}</em></h2>
+        <h2 id="h-contact">{{ t.contact.titel | escape }}{% if t.contact.titel_accent and t.contact.titel_accent != "" %} <em>{{ t.contact.titel_accent | escape }}</em>{% endif %}</h2>
         <p>{{ t.contact.tekst | escape }}</p>
         <div class="contact-btns">
           <a class="wa" href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener">

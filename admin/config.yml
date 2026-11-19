@@ -251,7 +251,7 @@ collections:
             collapsed: true
             fields:
               - { label: Kop, name: titel, widget: string }
-              - { label: "Kop (tweede deel, schuin)", name: titel_accent, widget: string }
+              - { label: "Kop (tweede deel, schuin; leeg = alleen de kop)", name: titel_accent, widget: string, required: false }
               - { label: Tekst, name: tekst, widget: text }
               - { label: Knop WhatsApp, name: knop_whatsapp, widget: string }
               - { label: Knop e-mail, name: knop_email, widget: string }

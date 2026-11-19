@@ -347,7 +347,7 @@ footer p{margin:0}
       <p class="kicker">{{ t.intro.kicker | escape }}</p>
       <h1><span class="l1">{{ t.intro.naam | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
       <p class="lead">{{ t.intro.tekst | escape }}</p>
-      {% if t.intro.beschikbaar != blank %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}
+      {% if t.intro.beschikbaar and t.intro.beschikbaar != "" %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}
       <div class="hero-ctas">
         <a class="pill pill-solid" href="#contact">{{ t.intro.knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
         <a class="pill pill-line" href="#helpen">{{ t.intro.knop_helpen | escape }}</a>

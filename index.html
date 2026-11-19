@@ -281,6 +281,22 @@ a{color:inherit}
 .wa svg{width:22px;height:22px}
 @media (max-width:30rem){.wa{width:100%}}
 .contact .num{color:#E2B26B}
+.contact::after{content:"";position:absolute;right:-16rem;bottom:-16rem;width:40rem;height:40rem;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 26px,rgba(226,178,107,.09) 26px 27px);pointer-events:none}
+.contact-grid{display:grid;gap:2.5rem;z-index:1}
+@media (min-width:56rem){.contact-grid{grid-template-columns:1.25fr .85fr;align-items:center;gap:4rem}}
+.c-card{background:rgba(244,239,229,.05);border:1px solid rgba(244,239,229,.16);border-radius:22px;padding:1.4rem 1.4rem .6rem;backdrop-filter:blur(2px)}
+.c-head{margin:0 0 .4rem!important;font:600 .75rem/1 var(--sans)!important;letter-spacing:.18em;text-transform:uppercase;color:#E2B26B!important}
+.c-list{list-style:none;margin:0;padding:0}
+.c-list li+li{border-top:1px solid rgba(244,239,229,.12)}
+.c-list a,.c-list li>div{display:flex;align-items:center;gap:1rem;padding:.95rem 0;color:#F4EFE5;text-decoration:none}
+.c-list a:hover .c-ic{background:#E2B26B;color:var(--forest);border-color:#E2B26B}
+.c-list a:hover b{color:#E2B26B}
+.c-ic{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(226,178,107,.55);color:#E2B26B;transition:background-color .25s,color .25s}
+.c-ic svg{width:20px;height:20px}
+.c-txt{display:grid;gap:.1rem;min-width:0}
+.c-txt small{font-size:.75rem;letter-spacing:.06em;color:#AFC0B4}
+.c-txt b{font-weight:600;font-size:1.02rem;overflow-wrap:anywhere;transition:color .25s}
+.c-txt i{font-style:normal;font-size:.85rem;color:#AFC0B4}
 .contact .wa-note{font-size:.85rem;color:#AFC0B4;margin:1rem 0 0}
 
 footer{background:var(--forest);color:#AFC0B4;font-size:.85rem;border-top:1px solid rgba(244,239,229,.12)}
@@ -548,28 +564,38 @@ footer p{margin:0}
   </section>
 
   <section class="contact" id="contact" aria-labelledby="h-contact">
-    <div class="wrap reveal">
-      <span class="num">04</span>
-      <h2 id="h-contact">{{ t.contact.titel | escape }} <em>{{ t.contact.titel_accent | escape }}</em></h2>
-      <p>{{ t.contact.tekst | escape }}</p>
-      <div class="contact-btns">
-      <a class="wa" href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
-        {{ t.contact.knop_whatsapp | escape }}
-      </a>
-        <a class="wa wa-line" href="mailto:{{ t.contact.email | escape }}?subject={{ t.contact.email_onderwerp | uri_escape }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          {{ t.contact.knop_email | escape }}
-        </a>
+    <div class="wrap contact-grid reveal">
+      <div>
+        <span class="num">04</span>
+        <h2 id="h-contact">{{ t.contact.titel | escape }} <em>{{ t.contact.titel_accent | escape }}</em></h2>
+        <p>{{ t.contact.tekst | escape }}</p>
+        <div class="contact-btns">
+          <a class="wa" href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+            {{ t.contact.knop_whatsapp | escape }}
+          </a>
+          <a class="wa wa-line" href="mailto:{{ t.contact.email | escape }}?subject={{ t.contact.email_onderwerp | uri_escape }}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            {{ t.contact.knop_email | escape }}
+          </a>
+        </div>
       </div>
-      <p class="wa-note">{{ t.contact.telefoon_label | escape }} <a class="ul" href="tel:+{{ t.contact.telefoon_internationaal | escape }}">{{ t.contact.telefoon | escape }}</a> · <a class="ul" href="mailto:{{ t.contact.email | escape }}">{{ t.contact.email | escape }}</a></p>
+      <aside class="c-card" aria-label="Contactgegevens">
+        <p class="c-head">Direct contact</p>
+        <ul class="c-list">
+          <li><a href="tel:+{{ t.contact.telefoon_internationaal | escape }}"><span class="c-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="c-txt"><small>Bellen</small><b>{{ t.contact.telefoon | escape }}</b></span></a></li>
+          <li><a href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener"><span class="c-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><span class="c-txt"><small>WhatsApp</small><b>{{ t.contact.telefoon | escape }}</b></span></a></li>
+          <li><a href="mailto:{{ t.contact.email | escape }}"><span class="c-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span class="c-txt"><small>E-mail</small><b>{{ t.contact.email | escape }}</b></span></a></li>
+          <li><div><span class="c-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><span class="c-txt"><small>Domein Stam</small><b>KvK {{ t.voettekst.kvk | escape }}</b><i>btw-id {{ t.voettekst.btw | escape }}</i></span></div></li>
+        </ul>
+      </aside>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>{{ t.voettekst.naam | escape }} · KvK {{ t.voettekst.kvk | escape }} · btw-id {{ t.voettekst.btw | escape }}</p>
+    <p>{{ t.voettekst.naam | escape }} · KvK {{ t.voettekst.kvk | escape }}</p>
     <p>{{ t.voettekst.slogan | escape }}</p>
   </div>
 </footer>

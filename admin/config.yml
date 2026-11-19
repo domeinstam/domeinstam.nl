@@ -41,7 +41,7 @@ collections:
               - { label: Naam, name: naam, widget: string }
               - { label: Ondertitel, name: ondertitel, widget: string }
               - { label: Introductietekst, name: tekst, widget: text }
-              - { label: Beschikbaarheid, name: beschikbaar, widget: string }
+              - { label: "Beschikbaarheid (leeg = niet tonen)", name: beschikbaar, widget: string, required: false }
               - { label: Knop Kennismaken, name: knop_kennismaken, widget: string }
               - { label: Knop Waarmee ik help, name: knop_helpen, widget: string }
 

@@ -290,7 +290,8 @@ footer p{margin:0}
 /* ---------- persoonlijke hero ---------- */
 .hero h1 .l1{white-space:nowrap}
 .hero h1 .l2{font-size:clamp(1.5rem,4.2vw,2.6rem);line-height:1.15;margin-top:.35em}
-@media (min-width:56rem){.hero h1 .l2{padding-left:0;max-width:22ch}}
+@media (min-width:56rem){.hero h1 .l2{padding-left:0;max-width:none}}
+.hero h1 .l2{text-wrap:balance}
 .avail{display:inline-block;margin:1.25rem 0 0;padding:.45rem .9rem;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:.92rem;color:var(--forest)}
 .hero-portrait{justify-self:end;width:100%;max-width:24rem;margin:1.5rem 0 0}
 @media (max-width:55.99rem){.hero-portrait{justify-self:start;max-width:none}}
@@ -346,7 +347,7 @@ footer p{margin:0}
       <p class="kicker">{{ t.intro.kicker | escape }}</p>
       <h1><span class="l1">{{ t.intro.naam | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
       <p class="lead">{{ t.intro.tekst | escape }}</p>
-      <p class="avail">{{ t.intro.beschikbaar | escape }}</p>
+      {% if t.intro.beschikbaar != blank %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}
       <div class="hero-ctas">
         <a class="pill pill-solid" href="#contact">{{ t.intro.knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
         <a class="pill pill-line" href="#helpen">{{ t.intro.knop_helpen | escape }}</a>

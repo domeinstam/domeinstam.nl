@@ -55,7 +55,7 @@ a{color:inherit}
 .ul:hover,.ul:focus-visible{background-size:100% 1.5px}
 
 /* ---------- topbalk ---------- */
-.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0}
+.top{display:flex;align-items:center;justify-content:flex-end;gap:1rem;padding:1.25rem 0}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 .78rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase}
 .nav{display:flex;gap:1.25rem;font-size:.9rem}
 .nav a{color:var(--muted)}
@@ -333,7 +333,6 @@ footer p{margin:0}
 <div class="hero-shell">
 <div class="wrap">
   <div class="top">
-    <a class="brand" href="./" aria-label="{{ t.intro.naam | escape }}, naar het begin">{{ t.intro.naam | escape }}</a>
     <nav class="nav" aria-label="Hoofdmenu">
       <a class="ul" href="#helpen">Waarmee ik help</a>
       <a class="ul opt" href="#verhaal">Verhaal</a>

@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rens Stam · Ondernemer, organisator, probleemoplosser</title>
+<meta name="description" content="Rens Stam (Domein Stam): ondernemer, organisator en probleemoplosser. Organisatie- en procesverbetering, sparring, tijdelijke ondersteuning, IT, AI en commerciële vraagstukken.">
+<meta name="author" content="Rens Stam">
+<link rel="canonical" href="https://domeinstam.nl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Domein Stam">
+<meta property="og:title" content="Rens Stam · Ondernemer, organisator, probleemoplosser">
+<meta property="og:description" content="Meedenken. Verbeteren. Realiseren. Beschikbaar voor opdrachten, projecten en passende samenwerkingen.">
+<meta property="og:url" content="https://domeinstam.nl/">
+<link rel="icon" href="data:,">
+<meta name="theme-color" content="#F4EFE5">
+<style>
+:root{
+  --bg:#F4EFE5;            /* linnen */
+  --bg-2:#EAE2D2;          /* spint */
+  --paper:#FFFCF6;
+  --ink:#1B2520;
+  --muted:#59615A;
+  --line:#DDD3C1;
+  --forest:#1E3328;        /* bosgroen */
+  --moss:#5C6B5E;
+  --resin:#C98A3A;         /* hars, decoratief */
+  --resin-ink:#8A570F;     /* hars, voor tekst op licht */
+  --atempo:#082C54; --atempo-2:#04717C;
+  --restavia:#DCE8EA; --restavia-ink:#24465A;
+  --radius:22px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+.hero-shell{overflow:hidden}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}
+@media (min-width:48rem){.wrap{padding:0 2rem}}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--resin-ink);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:.5rem;background:var(--paper);padding:.5rem .8rem;border-radius:8px;z-index:20}
+.skip:focus{left:1rem}
+
+/* geanimeerde onderstreping */
+.ul{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/0 1.5px no-repeat;transition:background-size .35s var(--ease);padding-bottom:2px}
+.ul:hover,.ul:focus-visible{background-size:100% 1.5px}
+
+/* ---------- topbalk ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 .78rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.nav{display:flex;gap:1.25rem;font-size:.9rem}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+@media (max-width:30rem){.nav .opt{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;display:grid;gap:1rem;padding:2.5rem 0 3rem;isolation:isolate}
+@media (min-width:56rem){.hero{grid-template-columns:1.6fr .9fr;align-items:center;padding:3.5rem 0 4.5rem}}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--muted);margin:0 0 1.5rem}
+.kicker::before{content:"";width:2.2rem;height:1.5px;background:var(--resin)}
+.hero h1{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:.98}
+.hero h1 .l1{display:block;font-size:clamp(2.9rem,9.5vw,5.4rem);white-space:nowrap}
+@media (max-width:22rem){.hero h1 .l1{white-space:normal}}
+.hero h1 .l2{display:block;font-size:clamp(2.1rem,6.6vw,4.3rem);font-style:italic;color:var(--resin-ink);margin-top:.15em}
+@media (min-width:56rem){.hero h1 .l2{padding-left:1.4em}}
+.hero .lead{max-width:34rem;font-size:1.1rem;margin:2rem 0 .6rem}
+.hero .lead2{max-width:34rem;color:var(--muted);margin:0}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.pill{display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:.75rem 1.25rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .25s var(--ease),background-color .25s,color .25s,box-shadow .25s}
+.pill-solid{background:var(--forest);color:#F4EFE5}
+.pill-solid:hover{transform:translateY(-2px);box-shadow:0 10px 24px -12px rgba(30,51,40,.6)}
+.pill-line{border:1.5px solid var(--forest);color:var(--forest)}
+.pill-line:hover{background:var(--forest);color:#F4EFE5}
+.pill .arr{transition:transform .25s var(--ease)}
+.pill:hover .arr{transform:translateX(3px)}
+
+/* jaarringen (zonder stippen) */
+.rings{position:relative;width:min(100%,30rem);aspect-ratio:1;justify-self:center;margin-top:1rem}
+@media (max-width:55.99rem){.rings{position:absolute;right:-45%;top:-4rem;width:min(30rem,95vw);opacity:.32;z-index:-1;pointer-events:none;margin:0}}
+.rings svg{width:100%;height:100%;overflow:visible}
+.rings .ring{fill:none;stroke:var(--moss);stroke-width:1.1;opacity:.55;transform-origin:250px 250px;transform-box:view-box}
+.rings .ring-hars{stroke:var(--resin);stroke-width:1.6;opacity:.9}
+
+/* ---------- sectiekoppen ---------- */
+.sec{padding:4rem 0}
+.sec-head{display:grid;gap:.5rem;margin-bottom:2.25rem}
+@media (min-width:48rem){.sec-head{grid-template-columns:auto 1fr;align-items:end;gap:2rem}}
+.num{font:400 .95rem/1 var(--serif);font-style:italic;color:var(--resin-ink)}
+.sec-head h2{margin:.35rem 0 0;font:400 clamp(2rem,5vw,3.2rem)/1.05 var(--serif);letter-spacing:-.015em}
+.sec-head p{margin:0;color:var(--muted);max-width:30rem}
+@media (min-width:48rem){.sec-head p{justify-self:end;text-align:right}}
+
+/* ---------- projecten ---------- */
+.feat-grid{display:grid;gap:1.25rem}
+@media (min-width:56rem){.feat-grid{grid-template-columns:1fr 1fr}.phone{width:16.5rem}}
+.feat{position:relative;overflow:hidden;border-radius:var(--radius);display:grid;grid-template-rows:auto 1fr;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.feat:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(27,37,32,.55)}
+.feat-text{position:relative;z-index:2;padding:2rem 2rem 0}
+@media (min-width:56rem){.feat-text{padding:2.5rem 2.5rem 0}}
+.feat h3{margin:.9rem 0 0;font:400 clamp(2.2rem,5vw,3.2rem)/1 var(--serif);letter-spacing:-.01em}
+.feat h3 a{text-decoration:none}
+.feat h3 a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:var(--radius)}
+.feat h3 a:focus-visible{outline:none}
+.feat:has(h3 a:focus-visible){outline:3px solid var(--resin);outline-offset:4px}
+.slogan{margin:.5rem 0 0;font-family:var(--serif);font-style:italic;font-size:1.15rem}
+.feat .desc{margin:1rem 0 0;max-width:24rem}
+.cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;padding:.6rem 1.05rem;border-radius:999px;font-weight:600;font-size:.92rem}
+.cta .arr{transition:transform .25s var(--ease)}
+.feat:hover .cta .arr,.mini:hover .cta .arr,.biz:hover .cta .arr{transform:translateX(4px)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.tag{font-size:.74rem;line-height:1;padding:.42rem .62rem;border-radius:999px;font-weight:500}
+
+.phone{margin:0;justify-self:center;align-self:end;width:15.5rem;margin-top:2rem;margin-bottom:-8rem;transition:transform .5s var(--ease)}
+.phone img{width:100%;height:auto;border-radius:30px;border:7px solid #0E1512;box-shadow:0 30px 60px -25px rgba(0,0,0,.55);background:#fff}
+.feat:hover .phone{transform:translateY(-8px)}
+
+.atempo{background:radial-gradient(120% 90% at 100% 0%,#0B4B6E 0%,var(--atempo) 55%);color:#EAF3F6}
+.atempo .tag{background:rgba(255,255,255,.12);color:#DDF0F3}
+.atempo .tag.status{background:#F3D9A6;color:#4A3205}
+.atempo .slogan{color:#9FD9DF}
+.atempo .cta{background:#EAF3F6;color:var(--atempo)}
+
+.restavia{background:linear-gradient(170deg,#EEF4F2 0%,var(--restavia) 60%,#CFDDDC 100%);color:var(--restavia-ink)}
+.restavia .tag{background:rgba(36,70,90,.09);color:var(--restavia-ink)}
+.restavia .tag.status{background:#F3D9A6;color:#4A3205}
+.restavia .slogan{color:#3F6B67}
+.restavia .cta{background:var(--restavia-ink);color:#EEF4F2}
+
+/* zakelijk praktijkvoorbeeld */
+.biz{position:relative;margin-top:1.25rem;border-radius:var(--radius);background:#17211D;color:#ECE6DA;display:grid;gap:2rem;padding:1.75rem;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.biz:hover{transform:translateY(-4px);box-shadow:0 24px 50px -28px rgba(0,0,0,.6)}
+@media (min-width:56rem){.biz{grid-template-columns:1.05fr 1fr;padding:2.5rem;gap:3rem}}
+.biz .tag{background:rgba(236,230,218,.1);color:#ECE6DA}
+.biz .tag.status{background:var(--resin);color:#1B1206}
+.biz h3{margin:.9rem 0 0;font:400 clamp(1.8rem,4vw,2.6rem)/1.08 var(--serif)}
+.biz h3 a{text-decoration:none}
+.biz h3 a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:var(--radius)}
+.biz h3 a:focus-visible{outline:none}
+.biz:has(h3 a:focus-visible){outline:3px solid var(--resin);outline-offset:4px}
+.biz .slogan{color:#D9B47E;font-size:1rem}
+.biz p{max-width:34rem}
+.biz .desc{margin:1rem 0 0;color:#D8D2C6}
+.lock{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.25rem;font-size:.85rem;color:#ECE6DA;border:1px solid rgba(236,230,218,.25);border-radius:999px;padding:.45rem .85rem}
+.lock svg{width:14px;height:14px}
+.biz .cta{background:#ECE6DA;color:#17211D;margin-left:.5rem}
+.biz .fine{font-size:.82rem;color:#A9A396;margin-top:1rem}
+
+.flow{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:.75rem;align-self:center;counter-reset:f}
+.flow::before{content:"";position:absolute;left:1.15rem;top:1.2rem;bottom:1.2rem;width:1.5px;background:linear-gradient(#5C6B5E,#C98A3A)}
+.flow li{position:relative;display:grid;grid-template-columns:2.3rem 1fr;gap:.9rem;align-items:start;background:rgba(236,230,218,.05);border:1px solid rgba(236,230,218,.12);border-radius:14px;padding:.8rem 1rem .8rem .75rem}
+.flow li::before{counter-increment:f;content:counter(f);display:grid;place-items:center;width:1.6rem;height:1.6rem;margin-left:.05rem;border-radius:50%;background:#17211D;border:1.5px solid #8C9A8E;font:600 .78rem var(--sans);color:#ECE6DA;position:relative;z-index:1}
+.flow b{display:block;font-weight:600;font-size:.95rem}
+.flow span{display:block;font-size:.85rem;color:#B9B3A6;line-height:1.45}
+
+/* ---------- ondernemerschap & merken ---------- */
+/* Only Sun: zonnige variant van de projectkaart */
+.biz.sun{background:#F7E3B0;color:#2A2110}
+.biz.sun:hover{box-shadow:0 24px 50px -28px rgba(138,87,15,.55)}
+.biz.sun>div,.biz.sun .flow{position:relative;z-index:1}
+.biz.sun .sun-art{position:absolute;right:-110px;top:-110px;width:300px;height:300px;z-index:0;pointer-events:none}
+.biz.sun .tag{background:rgba(42,33,16,.08);color:#2A2110}
+.biz.sun .tag.status{background:#1E3328;color:#F7E3B0}
+.biz.sun .slogan{color:#8A570F}
+.biz.sun .desc{color:#3D3420}
+.biz.sun .lock{color:#2A2110;border-color:rgba(42,33,16,.3)}
+.biz.sun .fine{color:#6B5B36}
+.biz.sun .flow::before{background:linear-gradient(#E0A030,#8A570F)}
+.biz.sun .flow li{background:rgba(255,252,246,.6);border-color:rgba(138,87,15,.25)}
+.biz.sun .flow li::before{background:#FFF4D6;border-color:#C98A3A;color:#2A2110}
+.biz.sun .flow span{color:#5A4C2C}
+.biz.sun .flow{margin-top:1.75rem;align-self:start}
+.biz.sun .phone{position:relative;z-index:1;margin-top:0;margin-bottom:-7rem;align-self:end}
+.biz.sun:hover .phone{transform:translateY(-8px)}
+.biz-sec{background:var(--paper);border-top:1px solid var(--line)}
+.brands{list-style:none;margin:0;padding:0;display:grid;gap:1.25rem}
+@media (min-width:60rem){.brands{grid-template-columns:repeat(3,1fr)}}
+.brand-card{height:100%;display:flex;flex-direction:column;border-radius:var(--radius);overflow:hidden;background:var(--bg);border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.brand-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(27,37,32,.5)}
+.b-visual{position:relative;aspect-ratio:4/3;overflow:hidden}
+.b-body{padding:1.4rem 1.5rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.b-body p{margin:.6rem 0 0}
+.v-tags{margin:0!important;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.v-name{margin:.55rem 0 0;font:400 clamp(1.7rem,3.2vw,2.1rem)/1.08 var(--serif);letter-spacing:-.01em}
+.b-lead{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--forest)}
+.b-body p:not(.b-lead):not(.v-tags){font-size:.93rem}
+.v-quiet{color:var(--muted)}
+.v-status{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem!important;color:var(--muted);background:var(--paper);border-radius:12px;padding:.65rem .8rem;margin-top:1rem!important}
+.v-badge{flex:none;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#F3D9A6;color:#4A3205;border-radius:999px;padding:.28rem .5rem;margin-top:.05rem}
+.v-link{align-self:flex-start;margin-top:auto;padding-top:1rem;font-weight:600;font-size:.9rem;color:var(--forest)}
+.v-link.ul{background-position:0 100%}
+
+/* echte beelden + klein logo boven de naam */
+.shot-site{background:#EEE9DF}
+.shot-site img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .8s var(--ease)}
+.brand-card:hover .shot-site img{transform:scale(1.03)}
+.pf-visual{background:radial-gradient(120% 100% at 50% 100%,#EEF3E4 0%,#FBF9F2 70%);display:grid;place-items:center}
+.pf-visual img{width:auto;height:52%;max-width:60%;object-fit:contain}
+.ad-panel{background:linear-gradient(160deg,#C8161D 0%,#A70F16 100%);display:flex;align-items:flex-end;justify-content:center;padding:1.4rem 1.4rem 0}
+.browser{margin:0;width:100%;background:#fff;border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 -10px 30px -16px rgba(0,0,0,.45);transition:transform .6s var(--ease)}
+.browser-bar{display:flex;gap:5px;padding:7px 9px;background:#F1EEEA;border-bottom:1px solid #E2DDD6}
+.browser-bar i{width:7px;height:7px;border-radius:50%;background:#D5CFC6}
+.browser img{display:block;width:100%;height:auto}
+.brand-card:hover .browser{transform:translateY(-4px)}
+.panel-hon{background:linear-gradient(160deg,#5E8C77 0%,#3F6A57 100%)}
+.panel-pf{background:linear-gradient(160deg,#24493D 0%,#14302A 100%)}
+.browser-logo{aspect-ratio:800/500;display:grid;place-items:center}
+.browser-logo img{width:auto;height:62%;max-width:70%;object-fit:contain}
+.b-mark{display:block;height:2rem;width:auto;max-width:9rem;object-fit:contain;object-position:left center;margin:0 0 1rem}
+.b-mark-tall{height:3.4rem;margin-bottom:.9rem}
+.b-mark-wide{height:1.15rem;max-width:11rem;margin-top:.4rem;margin-bottom:1.4rem}
+/* logo's in een vak van gelijke hoogte, zodat labels en namen op één lijn staan */
+.brand-card .b-mark{margin:1.4rem 0 1rem}
+.brand-card .b-mark-tall{margin-top:0}
+.brand-card .b-mark-wide{margin-top:2.25rem}
+.brand-card .v-tags{min-height:2.9em;line-height:1.45}
+.b-chips{list-style:none;margin:1rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.3rem}
+.b-chips li{font-size:.72rem;line-height:1.2;padding:.3rem .55rem;border-radius:999px;background:var(--paper);border:1px solid var(--line);color:var(--muted)}
+
+/* rode draad */
+.route{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem .25rem;align-items:center;counter-reset:r}
+.route li{display:flex;align-items:center;gap:.5rem;font:400 1.05rem var(--serif)}
+.route li::before{counter-increment:r;content:counter(r);display:grid;place-items:center;width:1.7rem;height:1.7rem;border-radius:50%;border:1.5px solid var(--forest);font:600 .75rem var(--sans);color:var(--forest)}
+.route li:last-child::before{background:var(--resin);border-color:var(--resin);color:#1B1206}
+.route li:not(:last-child)::after{content:"";width:1.6rem;height:1.5px;background:var(--line);margin:0 .35rem}
+@media (max-width:40rem){.route{flex-direction:column;align-items:flex-start;gap:.6rem}.route li::after{display:none!important}}
+@media (prefers-reduced-motion:no-preference){
+}
+
+/* ---------- over mij ---------- */
+.about{background:var(--bg-2);border-radius:32px 32px 0 0;margin-top:2rem}
+.about-grid{display:grid;gap:2.5rem}
+@media (min-width:56rem){.about-grid{gap:3rem}.about-main{margin-left:22%}}
+.portrait{position:relative;margin:0 0 1.75rem;aspect-ratio:3/2;max-width:22rem;border-radius:26px;overflow:hidden;background:var(--forest);color:#F4EFE5;display:grid;place-items:center}
+@media (min-width:56rem){.portrait{aspect-ratio:4/5}}
+/* Portretfoto later: vervang de inhoud van .portrait door <img src="img/rens.jpg" width="800" height="1000" alt="Portret van Rens Stam"> */
+.portrait-rings{position:absolute;left:50%;top:50%;width:150%;height:auto;translate:-50% -50%;pointer-events:none}
+.portrait-rings .ring{fill:none;stroke:#9FB5A5;stroke-width:1.2;opacity:.4}
+.portrait-rings .ring-hars{stroke:var(--resin);stroke-width:1.6;opacity:.75}
+.mono{position:relative;font:400 5.5rem/1 var(--serif);letter-spacing:-.03em}
+.mono i{color:var(--resin)}
+.portrait figcaption{position:absolute;left:1.25rem;bottom:1.1rem;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+.intro{margin:0;font:400 clamp(1.6rem,3.2vw,2.2rem)/1.18 var(--serif);letter-spacing:-.01em}
+.intro em{color:var(--resin-ink)}
+.side-text{color:var(--muted);margin:1rem 0 0;max-width:26rem}
+.story-lead{margin:0;max-width:46rem;font:400 clamp(1.45rem,3vw,2.1rem)/1.3 var(--serif);letter-spacing:-.005em;text-wrap:pretty}
+.chapters{list-style:none;margin:2.75rem 0 0;padding:0;display:grid}
+.chapters li{display:grid;gap:.35rem;padding:1.4rem 0;border-top:1px solid #D2C6AE}
+@media (min-width:40rem){.chapters li{grid-template-columns:11rem 1fr;gap:1.5rem}}
+.chapters h3{margin:0;font:italic 400 1.35rem/1.2 var(--serif);color:var(--resin-ink)}
+.chapters p{margin:0;max-width:34rem}
+.chapters li:last-child{border-bottom:1px solid #D2C6AE}
+.chapters li:last-child h3{color:var(--forest)}
+.connect{margin-top:3rem}
+.connect h3{margin:0 0 .75rem;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.connect p{max-width:38rem;margin:0 0 .9rem}
+.sign{font-family:var(--serif);font-style:italic;color:var(--forest);font-size:1.15rem}
+.disciplines{margin:2.5rem 0 0;display:grid;gap:0 2rem}
+@media (min-width:40rem){.disciplines{grid-template-columns:1fr 1fr}}
+.disciplines div{padding:.9rem 0;border-top:1px solid #D2C6AE}
+.disciplines dt{font-weight:600}
+.disciplines dd{margin:.15rem 0 0;color:var(--muted);font-size:.92rem}
+
+/* ---------- contact ---------- */
+.contact{background:var(--forest);color:#F4EFE5;position:relative;overflow:hidden}
+.contact .wrap{position:relative;padding-top:4.5rem;padding-bottom:4.5rem}
+.contact h2{margin:0;font:400 clamp(2.2rem,6.5vw,4.4rem)/1.05 var(--serif);letter-spacing:-.02em;max-width:16ch}
+.contact h2 em{color:#E2B26B}
+.contact p{max-width:30rem;font-size:1.1rem;color:#D7DED8;margin:1.25rem 0 2rem}
+.wa{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:56px;padding:.9rem 1.6rem;border-radius:999px;background:#F4EFE5;color:var(--forest);font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s}
+.wa:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+.wa svg{width:22px;height:22px}
+@media (max-width:30rem){.wa{width:100%}}
+.contact .num{color:#E2B26B}
+.contact .wa-note{font-size:.85rem;color:#AFC0B4;margin:1rem 0 0}
+
+footer{background:var(--forest);color:#AFC0B4;font-size:.85rem;border-top:1px solid rgba(244,239,229,.12)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;padding-top:1.5rem;padding-bottom:2rem}
+footer p{margin:0}
+
+
+/* ---------- persoonlijke hero ---------- */
+.hero h1 .l1{white-space:nowrap}
+.hero h1 .l2{font-size:clamp(1.5rem,4.2vw,2.6rem);line-height:1.15;margin-top:.35em}
+@media (min-width:56rem){.hero h1 .l2{padding-left:0;max-width:22ch}}
+.avail{display:inline-block;margin:1.25rem 0 0;padding:.45rem .9rem;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:.92rem;color:var(--forest)}
+.hero-portrait{justify-self:end;width:100%;max-width:24rem;margin:1.5rem 0 0}
+@media (max-width:55.99rem){.hero-portrait{justify-self:start;max-width:none}}
+.hero-portrait .photo{position:relative;width:62%;aspect-ratio:1;border-radius:50%;object-fit:cover;border:4px solid rgba(244,239,229,.9)}
+/* ---------- waarmee ik help ---------- */
+.help{list-style:none;margin:0;padding:0;display:grid;gap:0 3rem}
+@media (min-width:48rem){.help{grid-template-columns:1fr 1fr}}
+.help li{padding:1.4rem 0;border-top:1px solid var(--line)}
+.help h3{margin:0;font:400 clamp(1.3rem,2.4vw,1.6rem)/1.2 var(--serif)}
+.help p{margin:.45rem 0 0;color:var(--muted);max-width:32rem}
+.help li:last-child h3{font-style:italic;color:var(--resin-ink)}
+/* ---------- projecten ---------- */
+.sub-head{margin:2.5rem 0 1rem;font:600 .8rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.sub-head:first-of-type{margin-top:0}
+.also{margin:2rem 0 0;color:var(--muted);max-width:44rem}
+.also a{color:var(--forest);font-weight:600;white-space:nowrap}
+/* ---------- contact ---------- */
+.contact-btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.wa-line{background:transparent;color:#F4EFE5;border:1.5px solid rgba(244,239,229,.7)}
+.wa-line:hover{background:rgba(244,239,229,.1)}
+@media (max-width:30rem){.contact-btns .wa{width:100%}}
+
+/* ---------- beweging ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .hero-portrait .ring{animation:grow 10s ease-in-out infinite;animation-delay:calc(var(--i) * -0.9s)}
+  @keyframes grow{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#helpen">Naar de inhoud</a>
+
+<div class="hero-shell">
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="./" aria-label="Rens Stam, naar het begin">Rens Stam</a>
+    <nav class="nav" aria-label="Hoofdmenu">
+      <a class="ul" href="#helpen">Waarmee ik help</a>
+      <a class="ul opt" href="#verhaal">Verhaal</a>
+      <a class="ul opt" href="#projecten">Projecten</a>
+      <a class="ul" href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div>
+      <p class="kicker">Domein Stam · Meedenken. Verbeteren. Realiseren.</p>
+      <h1><span class="l1">Rens Stam</span> <span class="l2">Ondernemer. Organisator. Probleemoplosser.</span></h1>
+      <p class="lead">Ik leerde ondernemen op de winkelvloer van mijn eigen drogisterij en bouwde daarna aan webshops, merken en digitale toepassingen. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ik ga daarbij graag zelf aan de slag.</p>
+      <p class="avail">Beschikbaar voor opdrachten, projecten en passende samenwerkingen.</p>
+      <div class="hero-ctas">
+        <a class="pill pill-solid" href="#contact">Kennismaken <span class="arr" aria-hidden="true">→</span></a>
+        <a class="pill pill-line" href="#helpen">Waarmee ik help</a>
+      </div>
+    </div>
+
+    <figure class="portrait hero-portrait">
+      <!-- Portretfoto later: zet <img class="photo" src="img/rens.jpg" width="800" height="800" alt="Portret van Rens Stam"> in plaats van de initialen -->
+            <svg class="portrait-rings" viewBox="0 0 500 500" aria-hidden="true" focusable="false">
+<path class="ring" data-i="0" d="M273.0 250.0L272.5 251.5L271.9 252.9L271.1 254.2L270.5 255.5L269.9 256.8L269.5 258.1L269.2 259.4L268.9 260.9L268.6 262.4L268.1 263.9L267.5 265.3L266.5 266.5L265.4 267.5L264.0 268.3L262.5 268.8L261.0 269.1L259.5 269.3L258.1 269.6L256.8 270.0L255.5 270.5L254.2 271.1L252.9 271.7L251.5 272.4L250.0 272.8L248.5 273.0L247.0 272.9L245.5 272.4L244.2 271.7L243.0 270.7L241.9 269.7L240.8 268.6L239.8 267.7L238.7 266.9L237.5 266.3L236.2 265.7L234.9 265.1L233.5 264.4L232.3 263.6L231.2 262.6L230.4 261.3L229.8 260.0L229.5 258.5L229.4 257.0L229.4 255.5L229.4 254.1L229.3 252.7L229.0 251.4L228.6 250.0L228.2 248.6L227.7 247.1L227.4 245.5L227.3 243.9L227.6 242.4L228.1 240.9L229.0 239.6L230.1 238.5L231.3 237.5L232.6 236.7L233.8 235.8L234.9 234.9L235.9 233.9L236.9 232.9L237.8 231.7L238.8 230.6L239.9 229.6L241.2 228.7L242.6 228.2L244.1 227.9L245.6 228.0L247.1 228.3L248.6 228.7L250.0 229.2L251.3 229.5L252.7 229.8L254.0 229.8L255.4 229.8L256.9 229.7L258.4 229.7L259.9 229.9L261.4 230.3L262.7 231.0L263.8 232.0L264.7 233.2L265.5 234.5L266.1 235.9L266.7 237.2L267.3 238.4L268.1 239.6L268.9 240.7L269.9 241.8L270.9 242.9L271.8 244.1L272.6 245.5L273.0 247.0L273.2 248.5Z"/>
+<path class="ring" data-i="1" d="M288.7 250.0L288.9 252.5L288.7 255.1L288.2 257.6L287.5 260.1L286.5 262.4L285.4 264.6L284.1 266.8L282.7 268.9L281.2 270.9L279.7 272.8L278.2 274.7L276.6 276.6L274.9 278.4L273.0 280.0L271.0 281.5L268.9 282.7L266.6 283.8L264.3 284.6L261.9 285.2L259.6 285.6L257.2 286.0L254.8 286.3L252.4 286.6L250.0 286.8L247.6 287.0L245.1 287.2L242.6 287.2L240.1 287.0L237.6 286.5L235.2 285.8L232.8 284.8L230.6 283.6L228.5 282.2L226.5 280.6L224.6 278.9L222.8 277.2L221.0 275.4L219.3 273.5L217.7 271.6L216.2 269.5L214.8 267.3L213.7 265.0L212.8 262.6L212.2 260.1L211.9 257.6L211.9 255.0L212.0 252.5L212.3 250.0L212.7 247.6L213.2 245.2L213.7 242.8L214.2 240.4L214.8 238.0L215.5 235.7L216.3 233.4L217.4 231.2L218.6 229.0L220.1 227.0L221.7 225.2L223.5 223.5L225.4 222.0L227.4 220.5L229.4 219.1L231.4 217.8L233.5 216.5L235.6 215.2L237.8 214.1L240.1 213.0L242.5 212.2L244.9 211.6L247.5 211.3L250.0 211.3L252.5 211.5L255.0 212.0L257.4 212.7L259.8 213.4L262.1 214.3L264.4 215.2L266.7 216.2L268.9 217.2L271.1 218.4L273.3 219.7L275.3 221.1L277.2 222.8L278.9 224.6L280.4 226.6L281.8 228.8L282.9 231.0L283.9 233.3L284.8 235.6L285.6 237.9L286.4 240.2L287.2 242.6L287.8 245.0L288.4 247.5Z"/>
+<path class="ring" data-i="2" d="M307.1 250.0L307.2 253.7L307.0 257.5L306.5 261.2L305.6 264.9L304.5 268.5L303.0 271.9L301.2 275.3L299.2 278.4L297.1 281.5L294.8 284.4L292.5 287.3L290.1 290.1L287.5 292.8L284.8 295.4L282.0 297.8L278.9 300.0L275.6 302.0L272.2 303.6L268.6 304.8L264.9 305.6L261.2 306.1L257.4 306.3L253.7 306.3L250.0 306.1L246.3 305.7L242.7 305.3L239.1 304.7L235.5 304.0L232.0 303.1L228.5 301.9L225.2 300.4L221.9 298.6L218.9 296.6L216.0 294.3L213.3 291.8L210.8 289.2L208.3 286.5L206.0 283.8L203.6 281.0L201.4 278.1L199.1 275.1L197.1 271.9L195.2 268.6L193.6 265.1L192.3 261.5L191.5 257.7L191.0 253.9L190.9 250.0L191.2 246.1L191.7 242.3L192.5 238.6L193.5 234.9L194.7 231.2L196.0 227.6L197.5 224.1L199.3 220.7L201.3 217.5L203.7 214.4L206.3 211.7L209.2 209.2L212.3 207.0L215.5 205.1L218.9 203.4L222.3 202.0L225.7 200.7L229.1 199.4L232.4 198.2L235.8 197.1L239.3 196.1L242.8 195.3L246.4 194.6L250.0 194.3L253.7 194.2L257.3 194.5L260.9 195.0L264.5 195.9L268.0 197.0L271.4 198.2L274.8 199.6L278.2 201.1L281.6 202.8L284.8 204.6L288.1 206.6L291.1 208.9L294.0 211.4L296.6 214.3L298.8 217.4L300.7 220.7L302.3 224.2L303.6 227.8L304.6 231.5L305.4 235.2L306.0 238.9L306.5 242.6L306.9 246.3Z"/>
+<path class="ring" data-i="3" d="M325.1 250.0L325.0 254.9L324.3 259.8L323.2 264.6L321.8 269.2L320.3 273.9L318.6 278.4L316.9 283.0L315.1 287.6L313.1 292.2L310.8 296.7L308.2 301.0L305.0 305.0L301.4 308.6L297.3 311.6L292.8 314.1L288.1 316.1L283.3 317.6L278.5 318.7L273.6 319.7L268.9 320.5L264.2 321.3L259.5 322.1L254.8 322.8L250.0 323.3L245.2 323.4L240.4 323.0L235.7 322.1L231.1 320.6L226.7 318.7L222.5 316.4L218.5 313.8L214.7 311.2L210.9 308.5L207.1 305.9L203.3 303.3L199.4 300.6L195.5 297.8L191.7 294.7L188.2 291.3L185.1 287.5L182.5 283.3L180.5 278.8L179.0 274.1L177.9 269.3L177.2 264.5L176.8 259.6L176.5 254.8L176.2 250.0L176.0 245.1L175.9 240.2L176.0 235.3L176.6 230.3L177.6 225.4L179.2 220.7L181.4 216.2L184.2 212.0L187.3 208.1L190.8 204.6L194.5 201.3L198.2 198.2L201.8 195.1L205.5 192.0L209.2 189.0L213.0 186.0L217.0 183.1L221.2 180.5L225.7 178.4L230.4 176.8L235.3 175.9L240.2 175.5L245.1 175.7L250.0 176.2L254.8 177.0L259.5 178.0L264.1 179.0L268.8 180.0L273.4 181.1L278.0 182.3L282.6 183.8L287.1 185.7L291.3 188.1L295.2 191.1L298.7 194.4L301.8 198.2L304.5 202.2L307.0 206.3L309.2 210.5L311.3 214.6L313.5 218.7L315.8 222.8L318.0 226.9L320.2 231.2L322.1 235.7L323.6 240.3L324.7 245.1Z"/>
+<path class="ring ring-hars" data-i="4" d="M345.1 250.0L344.8 256.2L344.2 262.4L343.3 268.6L342.2 274.7L340.8 280.8L338.9 286.8L336.7 292.7L333.9 298.5L330.7 303.9L327.0 309.1L322.8 313.8L318.2 318.2L313.4 322.3L308.3 326.0L303.1 329.4L297.7 332.7L292.3 335.7L286.7 338.6L281.0 341.2L275.0 343.4L269.0 345.3L262.7 346.6L256.4 347.4L250.0 347.6L243.6 347.3L237.3 346.4L231.1 345.0L225.0 343.3L219.0 341.3L213.1 339.0L207.4 336.5L201.7 333.7L196.2 330.5L190.9 327.0L186.0 323.0L181.3 318.7L177.2 313.9L173.5 308.7L170.3 303.3L167.5 297.6L165.1 291.9L163.1 286.0L161.3 280.1L159.7 274.2L158.3 268.2L157.2 262.2L156.3 256.1L155.8 250.0L155.7 243.8L156.1 237.6L157.0 231.5L158.4 225.5L160.3 219.5L162.5 213.8L165.1 208.1L167.9 202.6L171.0 197.2L174.3 191.9L177.8 186.7L181.6 181.6L185.8 176.8L190.3 172.2L195.3 168.1L200.6 164.4L206.3 161.3L212.2 158.7L218.3 156.7L224.6 155.2L230.9 154.2L237.3 153.5L243.6 153.1L250.0 153.0L256.3 153.2L262.7 153.8L268.9 154.8L275.1 156.2L281.2 158.2L287.0 160.7L292.6 163.7L297.9 167.1L302.8 170.9L307.6 175.0L312.0 179.3L316.3 183.7L320.4 188.2L324.4 192.9L328.2 197.8L331.8 202.8L335.1 208.0L338.0 213.5L340.5 219.3L342.4 225.2L343.8 231.3L344.7 237.5L345.1 243.8Z"/>
+<path class="ring" data-i="5" d="M367.6 250.0L367.9 257.7L367.5 265.5L366.3 273.1L364.5 280.7L362.0 288.0L359.1 295.2L355.8 302.2L352.2 309.0L348.2 315.6L343.9 322.0L339.1 328.1L333.8 333.8L328.1 339.1L321.9 343.8L315.3 347.8L308.4 351.2L301.2 353.9L294.0 356.1L286.6 357.8L279.3 359.2L271.9 360.3L264.6 361.2L257.3 361.9L250.0 362.3L242.6 362.4L235.3 362.0L227.9 361.0L220.7 359.5L213.6 357.3L206.7 354.5L200.1 351.3L193.7 347.6L187.5 343.5L181.6 339.2L175.8 334.7L170.1 329.9L164.6 324.9L159.4 319.5L154.5 313.8L150.0 307.8L146.0 301.3L142.7 294.4L140.1 287.3L138.2 280.0L136.8 272.5L136.0 265.0L135.6 257.5L135.5 250.0L135.7 242.5L136.2 235.0L137.0 227.5L138.2 220.0L139.9 212.6L142.1 205.3L145.0 198.2L148.4 191.4L152.5 184.9L157.2 178.8L162.3 173.1L167.7 167.7L173.4 162.7L179.4 157.9L185.5 153.4L191.8 149.2L198.3 145.3L205.2 141.7L212.2 138.8L219.6 136.4L227.1 134.8L234.7 133.9L242.4 133.8L250.0 134.3L257.5 135.5L264.9 137.1L272.1 139.1L279.1 141.4L286.0 143.9L292.8 146.6L299.5 149.6L306.0 152.9L312.3 156.7L318.4 160.9L324.0 165.6L329.3 170.7L334.1 176.3L338.5 182.1L342.6 188.1L346.4 194.4L349.9 200.7L353.4 207.2L356.6 213.8L359.7 220.6L362.4 227.6L364.7 234.9L366.5 242.4Z"/>
+<path class="ring" data-i="6" d="M388.6 250.0L387.4 259.0L385.5 267.8L383.1 276.5L380.2 284.9L376.9 293.1L373.3 301.1L369.5 308.9L365.5 316.7L361.1 324.2L356.4 331.6L351.2 338.8L345.6 345.6L339.5 352.1L332.9 358.1L325.9 363.6L318.5 368.6L310.8 373.2L302.7 377.3L294.5 381.1L286.0 384.4L277.3 387.3L268.4 389.7L259.3 391.6L250.0 392.8L240.6 393.2L231.2 392.8L221.9 391.5L212.7 389.3L203.7 386.3L195.1 382.6L186.8 378.2L178.9 373.2L171.3 367.8L164.0 362.0L157.1 355.9L150.6 349.4L144.5 342.6L138.8 335.3L133.6 327.8L129.1 319.8L125.2 311.5L122.0 303.0L119.4 294.3L117.4 285.5L116.0 276.7L114.9 267.8L114.3 258.9L114.0 250.0L114.1 241.1L114.6 232.2L115.6 223.3L117.2 214.4L119.5 205.7L122.4 197.2L126.1 188.9L130.4 181.0L135.4 173.4L140.9 166.3L146.8 159.5L153.1 153.1L159.6 147.0L166.5 141.2L173.7 135.8L181.1 130.7L188.9 126.1L197.0 122.0L205.4 118.6L214.0 115.8L222.9 113.7L231.9 112.3L240.9 111.5L250.0 111.4L259.1 111.7L268.1 112.5L277.1 113.6L286.1 115.2L295.1 117.3L303.9 119.8L312.7 122.9L321.2 126.7L329.4 131.2L337.2 136.4L344.5 142.3L351.2 148.8L357.4 155.8L363.0 163.3L368.1 171.1L372.7 179.2L376.8 187.5L380.4 196.0L383.4 204.7L385.9 213.6L387.7 222.6L388.8 231.7L389.1 240.9Z"/>
+<path class="ring" data-i="7" d="M407.2 250.0L406.2 260.2L404.6 270.4L402.5 280.3L399.7 290.1L396.4 299.7L392.4 309.0L387.9 318.0L382.8 326.7L377.4 335.1L371.5 343.3L365.4 351.2L358.9 358.9L352.1 366.4L344.9 373.6L337.3 380.6L329.2 387.1L320.6 393.2L311.5 398.6L302.0 403.2L292.1 407.1L281.8 410.1L271.4 412.2L260.7 413.5L250.0 414.0L239.3 413.8L228.6 412.9L217.9 411.3L207.4 409.1L197.0 406.1L186.9 402.3L177.1 397.7L167.8 392.4L158.9 386.3L150.7 379.5L142.9 372.1L135.8 364.2L129.3 355.9L123.2 347.3L117.6 338.5L112.4 329.4L107.7 320.2L103.4 310.7L99.6 301.0L96.4 291.2L93.9 281.1L92.1 270.8L91.1 260.4L90.9 250.0L91.5 239.6L92.8 229.3L94.7 219.1L97.3 209.1L100.4 199.2L104.0 189.5L108.1 180.0L112.8 170.8L118.1 161.9L124.1 153.4L130.6 145.3L137.8 137.8L145.6 130.9L153.8 124.6L162.5 119.0L171.4 113.9L180.7 109.4L190.1 105.3L199.7 101.7L209.4 98.4L219.3 95.6L229.4 93.3L239.6 91.5L250.0 90.3L260.5 89.9L271.0 90.2L281.6 91.4L292.0 93.3L302.3 96.0L312.4 99.4L322.3 103.5L331.9 108.1L341.3 113.4L350.4 119.2L359.1 125.6L367.3 132.7L375.0 140.4L382.0 148.8L388.1 157.7L393.5 167.2L397.9 177.1L401.4 187.3L404.1 197.7L406.0 208.2L407.1 218.7L407.7 229.2L407.7 239.7Z"/>
+<path class="ring ring-hars" data-i="8" d="M438.7 250.0L438.5 262.4L437.7 274.7L436.1 287.0L433.7 299.2L430.4 311.2L426.1 322.9L420.7 334.2L414.4 344.9L407.1 355.0L399.1 364.4L390.6 373.3L381.6 381.6L372.3 389.5L362.8 397.0L352.9 404.1L342.8 410.7L332.3 416.9L321.4 422.4L310.1 427.0L298.4 430.7L286.5 433.3L274.3 434.8L262.1 435.3L250.0 434.8L238.0 433.5L226.1 431.6L214.4 429.1L202.8 426.1L191.4 422.7L180.1 418.8L169.0 414.2L158.3 408.8L148.0 402.7L138.2 395.7L129.0 387.9L120.6 379.4L112.8 370.3L105.7 360.7L99.1 350.8L92.9 340.7L87.1 330.3L81.6 319.7L76.5 308.9L71.8 297.8L67.6 286.3L64.3 274.4L61.9 262.3L60.5 250.0L60.3 237.6L61.2 225.1L63.1 212.8L66.0 200.7L69.6 188.8L73.9 177.1L78.9 165.6L84.5 154.4L90.7 143.5L97.6 133.0L105.3 123.1L113.8 113.8L123.2 105.4L133.3 97.9L144.1 91.5L155.4 86.2L167.1 81.8L178.9 78.3L190.8 75.5L202.6 73.3L214.5 71.5L226.3 70.2L238.2 69.3L250.0 69.0L261.8 69.3L273.6 70.4L285.3 72.4L296.8 75.3L308.0 79.0L319.0 83.5L329.5 88.7L339.8 94.4L349.9 100.6L359.7 107.1L369.4 113.9L378.8 121.2L388.1 128.9L396.9 137.3L405.2 146.3L412.7 156.1L419.3 166.5L424.9 177.5L429.5 189.1L433.0 201.0L435.6 213.1L437.3 225.3L438.3 237.7Z"/>
+<path class="ring" data-i="9" d="M452.0 250.0L451.4 263.2L450.1 276.3L448.2 289.4L445.6 302.4L442.5 315.3L438.6 328.1L433.9 340.7L428.4 353.0L422.0 365.0L414.8 376.4L406.7 387.4L397.7 397.7L388.1 407.4L377.7 416.4L366.7 424.7L355.2 432.3L343.2 439.1L330.8 445.1L318.0 450.2L304.8 454.4L291.3 457.6L277.6 459.8L263.8 460.9L250.0 460.9L236.2 459.9L222.6 457.9L209.2 455.1L196.0 451.4L183.2 446.9L170.6 441.8L158.3 436.0L146.3 429.6L134.7 422.5L123.6 414.8L112.9 406.3L102.8 397.2L93.4 387.3L84.7 376.8L76.8 365.7L69.6 354.1L63.3 342.1L57.7 329.7L52.9 316.9L48.9 303.9L45.7 290.6L43.4 277.2L42.0 263.6L41.5 250.0L42.0 236.4L43.6 222.8L46.2 209.5L49.9 196.4L54.4 183.6L59.8 171.2L66.0 159.3L72.8 147.7L80.3 136.6L88.2 125.9L96.7 115.6L105.8 105.8L115.3 96.4L125.4 87.6L136.1 79.5L147.2 72.0L158.9 65.2L171.0 59.2L183.5 54.0L196.3 49.5L209.4 45.8L222.7 42.9L236.3 40.8L250.0 39.5L263.8 39.0L277.7 39.5L291.6 41.0L305.3 43.5L318.9 47.1L332.1 51.9L344.8 57.8L357.0 64.7L368.6 72.5L379.5 81.3L389.7 90.7L399.2 100.8L407.9 111.5L416.0 122.6L423.3 134.2L429.9 146.2L435.6 158.5L440.5 171.1L444.5 184.0L447.7 197.0L450.0 210.2L451.4 223.5L452.1 236.8Z"/>
+<path class="ring" data-i="10" d="M477.5 250.0L475.3 264.8L472.4 279.3L468.9 293.5L464.9 307.6L460.3 321.4L455.3 335.1L449.8 348.5L443.6 361.8L436.6 374.7L428.8 387.2L420.1 399.2L410.5 410.5L400.1 421.2L389.0 431.2L377.2 440.4L364.9 449.0L352.0 456.9L338.7 464.2L324.9 470.7L310.7 476.5L296.0 481.4L281.0 485.3L265.6 487.9L250.0 489.1L234.3 489.0L218.7 487.4L203.4 484.5L188.3 480.3L173.6 475.1L159.3 468.9L145.5 461.9L132.1 454.2L119.2 445.8L106.8 436.6L94.9 426.8L83.8 416.2L73.4 404.9L64.0 392.7L55.5 380.0L48.1 366.6L41.7 352.7L36.3 338.5L31.8 324.1L28.1 309.5L25.1 294.7L22.8 279.9L21.2 265.0L20.5 250.0L20.6 235.0L21.8 220.0L24.1 205.1L27.6 190.4L32.2 176.1L38.1 162.2L44.9 148.9L52.6 136.0L61.1 123.7L70.1 112.0L79.7 100.7L89.8 89.8L100.4 79.4L111.6 69.6L123.3 60.4L135.6 51.9L148.6 44.4L162.1 37.7L176.0 32.1L190.4 27.5L205.0 23.9L219.9 21.2L234.9 19.3L250.0 18.1L265.2 17.7L280.5 18.0L295.9 19.2L311.3 21.2L326.6 24.4L341.6 28.8L356.3 34.5L370.4 41.5L383.8 49.7L396.5 59.1L408.3 69.5L419.3 80.7L429.4 92.7L438.6 105.2L447.1 118.3L454.7 131.8L461.5 145.7L467.2 160.0L471.9 174.7L475.4 189.6L477.7 204.7L478.8 219.9L478.7 235.0Z"/>
+            </svg>
+      <span class="mono" aria-hidden="true">R<i>S</i></span>
+      <figcaption>Rens Stam</figcaption>
+    </figure>
+  </header>
+</div>
+</div>
+
+<main>
+  <section class="sec" id="helpen" aria-labelledby="h-helpen">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="num">01</span><h2 id="h-helpen">Waarmee ik kan helpen</h2></div>
+        <p>Niet alleen meedenken, maar ook zelf aan de slag.</p>
+      </div>
+      <ul class="help">
+        <li class="reveal"><h3>Het loopt organisatorisch vast</h3><p>Ik breng processen in kaart, richt werkzaamheden opnieuw in en voer verbeteringen ook echt door.</p></li>
+        <li class="reveal"><h3>Je zoekt een sparringpartner</h3><p>Ik denk onafhankelijk mee over ideeën, strategie en belangrijke zakelijke beslissingen.</p></li>
+        <li class="reveal"><h3>Tijdelijk extra capaciteit</h3><p>Ik pak een project op, breng structuur aan en werk praktisch mee.</p></li>
+        <li class="reveal"><h3>Slimmer werken</h3><p>Ik onderzoek wat bestaande software, automatisering en AI concreet kunnen opleveren.</p></li>
+        <li class="reveal"><h3>Commerciële ontwikkeling</h3><p>Ik denk mee over e-commerce, verkoop, producten, merken en distributie.</p></li>
+        <li class="reveal"><h3>Iets anders?</h3><p>Staat jouw vraagstuk er niet tussen? <a class="ul" href="#contact">Vertel het me gerust.</a></p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec about" id="verhaal" aria-labelledby="h-verhaal">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="num">02</span><h2 id="h-verhaal">Mijn verhaal</h2></div>
+        <p>Van de winkelvloer naar webshops, merken en digitale toepassingen.</p>
+      </div>
+      <div class="about-grid">
+        <aside class="about-side reveal">
+          <p class="story-lead">Mijn ondernemersloopbaan begon met een eigen drogisterij, die ik vanaf mijn 25e jarenlang heb gerund. Vanuit de fysieke detailhandel ontwikkelde ik mij verder in e-commerce, merkontwikkeling en digitale innovatie.</p>
+        </aside>
+        <div class="about-main">
+          <ol class="chapters" aria-label="Mijn loopbaan">
+            <li class="reveal"><h3>De winkel</h3><p>Als gecertificeerd drogist met een eigen fysieke drogisterij legde ik de basis: kennis van de gezondheidsbranche en ondernemen in de praktijk.</p></li>
+            <li class="reveal"><h3>De webshop</h3><p>Met Adviesdrogisterij.nl ging ik in 2014 online, tot ik de webshop in 2026 overdroeg. Daar was ik betrokken bij vrijwel alles: commercie en marketing, inkoop en leveranciers, logistiek, personeel, financiën, organisatie en IT.</p></li>
+            <li class="reveal"><h3>De merken</h3><p>Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij.</p></li>
+            <li class="reveal"><h3>Digitale innovatie</h3><p>Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen, zoals Atempo, Restavia, Only Sun en Antwoorden Adviesdrogisterij.nl.</p></li>
+          </ol>
+
+          <div class="connect reveal">
+            <h3>Wat alles verbindt</h3>
+            <p>Mijn achtergrond ligt in de detailhandel, e-commerce en gezondheidsbranche, waarin ik inmiddels twintig jaar ervaring heb. Daarnaast beschik ik over een juridische opleiding en een brede praktische IT-achtergrond.</p>
+            <p>Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen.</p>
+            <p>Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen.</p>
+            <p>Met Domein Stam ondersteun ik ondernemers en organisaties als sparringpartner, organisatieverbeteraar en hands-on professional.</p>
+            <p class="sign">Meedenken. Verbeteren. Realiseren.</p>
+          </div>
+
+          <dl class="disciplines reveal">
+            <div><dt>Gezondheid</dt><dd>Twintig jaar in de branche, gecertificeerd drogist.</dd></div>
+            <div><dt>Ondernemerschap</dt><dd>Commercie, inkoop, verkoop en leveranciers, met oog voor haalbaarheid.</dd></div>
+            <div><dt>Organisatieverbetering</dt><dd>Organisatieontwikkeling en efficiëntere bedrijfsprocessen.</dd></div>
+            <div><dt>Juridische blik</dt><dd>Oog voor regelgeving, verantwoordelijkheden, afspraken en risico's.</dd></div>
+            <div><dt>IT &amp; AI</dt><dd>Een brede praktische IT-achtergrond; AI gericht ingezet.</dd></div>
+            <div><dt>Hands-on</dt><dd>Van eerste idee tot werkende toepassing.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec biz-sec" id="projecten" aria-labelledby="h-projecten">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div><span class="num">03</span><h2 id="h-projecten">Ondernemingen, merken en projecten</h2></div>
+        <p>Voorbeelden van wat ik heb opgebouwd, ontwikkeld en gemaakt.</p>
+      </div>
+      <h3 class="sub-head reveal">Ondernemingen &amp; merken</h3>
+      <ul class="brands">
+        <li class="reveal">
+          <article class="brand-card" aria-labelledby="h-ad">
+            <div class="b-visual ad-panel"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/ad-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de webshop adviesdrogisterij.nl met menu en banners."></figure></div>
+            <div class="b-body">
+              <img class="b-mark b-mark-wide" src="img/adviesdrogisterij-logo.svg" width="783" height="93" loading="lazy" decoding="async" alt="Logo Adviesdrogisterij.nl">
+              <p class="v-tags">E-commerce · Ondernemerschap · Gezondheid · 2014–2026</p>
+              <h3 id="h-ad" class="v-name">Adviesdrogisterij.nl</h3>
+              <p class="b-lead">Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf.</p>
+              <p>Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik van 2014 tot 2026 heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering.</p>
+              <ul class="b-chips" aria-label="Betrokken bij">
+                <li>Commercie &amp; online marketing</li><li>E-commerce</li><li>Inkoop &amp; leveranciers</li><li>Logistiek &amp; voorraad</li><li>Personeel</li><li>Organisatie&shy;ontwikkeling</li><li>Procesverbetering</li><li>Financiën</li><li>IT &amp; automatisering</li>
+              </ul>
+              <p class="v-status"><span class="v-badge">Overgedragen</span> In november 2026 overgedragen aan een nieuwe eigenaar. Het is geen onderdeel meer van Domein Stam.</p>
+              <a class="v-link ul" href="https://www.adviesdrogisterij.nl/" rel="noopener">adviesdrogisterij.nl <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </li>
+        <li class="reveal">
+          <article class="brand-card" aria-labelledby="h-pf">
+            <div class="b-visual ad-panel panel-pf"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/pf-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de website phytoforsan.nl met menu, Force of Nature en magnesiumproducten."></figure></div>
+            <div class="b-body">
+              <img class="b-mark b-mark-tall" src="img/phytoforsan-logo.png" width="480" height="386" loading="lazy" decoding="async" alt="Logo PhytoForsan">
+              <p class="v-tags">Merkontwikkeling · Gezondheid · Productontwikkeling · tot 2026</p>
+              <h3 id="h-pf" class="v-name">PhytoForsan</h3>
+              <p class="b-lead">Ervaring met het ontwikkelen en positioneren van eigen gezondheidsproducten.</p>
+              <p>Een merk binnen de gezondheidsbranche dat ik heb ontwikkeld, met ervaring in productontwikkeling, positionering en commerciële exploitatie. Het laat mijn belangstelling zien voor het ontwikkelen van producten en merken, van het eerste concept tot de praktische uitvoering.</p>
+              <ul class="b-chips" aria-label="Betrokken bij">
+                <li>Productontwikkeling</li><li>Merkpositionering</li><li>Supplementen</li><li>Wellness</li><li>Commerciële exploitatie</li>
+              </ul>
+              <p class="v-status"><span class="v-badge">Overgedragen</span> In 2026 samen met Adviesdrogisterij.nl overgedragen. Het merk is mijn initiatief, maar geen onderdeel meer van Domein Stam.</p>
+              <a class="v-link ul" href="https://www.phytoforsan.nl/" rel="noopener">phytoforsan.nl <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </li>
+        <li class="reveal">
+          <article class="brand-card" aria-labelledby="h-hon">
+            <div class="b-visual ad-panel panel-hon"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/hon-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de webshop healthofnature.nl met menu en Natural Green Chlorella."></figure></div>
+            <div class="b-body">
+              <img class="b-mark" src="img/hon-logo.png" width="400" height="129" loading="lazy" decoding="async" alt="Logo Health of Nature">
+              <p class="v-tags">Gezondheid · Import &amp; distributie · Merkontwikkeling</p>
+              <h3 id="h-hon" class="v-name">Health of Nature</h3>
+              <p class="b-lead">Ervaring met handel, distributie en commerciële ontwikkeling van natuurlijke gezondheidsproducten.</p>
+              <p>Vanuit Domein Stam houd ik mij bezig met Health of Nature, een merk binnen de markt voor natuurlijke gezondheidsproducten. Met onder andere Natural Green Chlorella en Spirulina richt het merk zich op de distributie en commerciële ontwikkeling van voedingssupplementen.</p>
+              <p class="v-quiet">Hier komen twintig jaar branche-ervaring samen met inkoop, leveranciersrelaties, groothandel, merkpositionering en commerciële bedrijfsvoering.</p>
+              <a class="v-link ul" href="https://www.healthofnature.nl/" rel="noopener">healthofnature.nl <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </li>
+      </ul>
+
+
+      <h3 class="sub-head reveal">Digitale toepassingen</h3>
+      <div class="feat-grid">
+        <article class="feat atempo reveal">
+          <div class="feat-text">
+            <ul class="tags"><li class="tag">Gezondheid &amp; beweging</li><li class="tag status">In ontwikkeling</li></ul>
+            <h3><a href="https://apps.domeinstam.nl/trainingsplan/">Atempo</a></h3>
+            <p class="slogan">Move. Recover. Grow.</p>
+            <p class="desc">Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.</p>
+            <span class="cta" aria-hidden="true">Open Atempo <span class="arr">→</span></span>
+          </div>
+          <figure class="phone"><img src="img/atempo.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Atempo op een telefoon: het scherm Vandaag met de Atempo Coach."></figure>
+        </article>
+
+        <article class="feat restavia reveal">
+          <div class="feat-text">
+            <ul class="tags"><li class="tag">Ontspanning</li><li class="tag status">In ontwikkeling</li></ul>
+            <h3><a href="https://app.phytoforsan.nl/">Restavia</a></h3>
+            <p class="slogan">Breathe. Feel. Flow.</p>
+            <p class="desc">Een digitale toepassing gericht op ademhaling, humming en ontspanning.</p>
+            <span class="cta" aria-hidden="true">Open Restavia <span class="arr">→</span></span>
+          </div>
+          <figure class="phone"><img src="img/restavia.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."></figure>
+        </article>
+      </div>
+
+      <article class="biz reveal">
+        <div>
+          <ul class="tags"><li class="tag status">Zakelijk praktijkvoorbeeld</li></ul>
+          <h3><a href="https://apps.domeinstam.nl/Antwoorden-Adviesdrogisterij.nl/">Antwoorden Adviesdrogisterij.nl</a></h3>
+          <p class="slogan">Gezondheid · Ondernemerschap · AI · Digitale innovatie</p>
+          <p class="desc">Een digitale toepassing ter ondersteuning van de klantcommunicatie binnen Adviesdrogisterij.nl. Ontwikkeld vanuit jarenlange praktijkervaring in de drogisterij- en gezondheidsbranche, gecombineerd met kennis van bedrijfsvoering, klantcommunicatie en digitale technologie.</p>
+          <p class="desc">Het project laat zien hoe ik branchekennis, zakelijke inzichten en zorgvuldigheid combineer bij het ontwikkelen van praktische AI-oplossingen.</p>
+          <div>
+            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Bestaande toepassing · alleen toegankelijk via inlogscherm</span>
+          </div>
+          <span class="cta" aria-hidden="true">Naar het inlogscherm <span class="arr">→</span></span>
+          <p class="fine">Een hulpmiddel voor medewerkers; het geeft zelf geen medisch of juridisch advies. Ontwikkeld voor gebruik binnen Adviesdrogisterij.nl.</p>
+        </div>
+        <ol class="flow" aria-label="Zo werkt het hulpmiddel">
+          <li><div><b>Klantvraag</b><span>De mail van de klant gaat de app in.</span></div></li>
+          <li><div><b>Conceptantwoord</b><span>AI stelt een concept op met de eigen instructies en kennisbank.</span></div></li>
+          <li><div><b>Controle</b><span>Het concept wordt nagelopen op de huisregels.</span></div></li>
+          <li><div><b>Medewerker</b><span>Past het antwoord waar nodig aan en neemt het over.</span></div></li>
+        </ol>
+      </article>
+
+      <article class="biz sun reveal">
+        <svg class="sun-art" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><g fill="none" stroke="#E3A73A" stroke-width="1.5"><circle cx="150" cy="150" r="140" opacity=".35"/><circle cx="150" cy="150" r="116" opacity=".45"/><circle cx="150" cy="150" r="92" opacity=".6"/><circle cx="150" cy="150" r="70" opacity=".8"/></g><circle cx="150" cy="150" r="48" fill="#F2B53C"/></svg>
+        <div>
+          <ul class="tags"><li class="tag">Zonne-energie</li><li class="tag status">Eigen gebruik</li></ul>
+          <h3>Only Sun</h3>
+          <p class="slogan">Laden op de zon.</p>
+          <p class="desc">Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger.</p>
+          <p class="desc">Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster.</p>
+          <div>
+            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Draait lokaal · niet openbaar</span>
+          </div>
+          <ol class="flow" aria-label="Zo werkt Only Sun">
+            <li><div><b>Zon meten</b><span>Wat de panelen opwekken en het huis verbruikt.</span></div></li>
+            <li><div><b>Overschot berekenen</b><span>Hoeveel zonnestroom er over is voor de auto.</span></div></li>
+            <li><div><b>Meebewegen</b><span>De laadpaal laadt mee met de zon.</span></div></li>
+            <li><div><b>Nacht</b><span>Wat de zon niet haalt, volgt 's nachts volgens plan.</span></div></li>
+          </ol>
+        </div>
+        <figure class="phone"><img src="img/onlysun.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Voorbeeld van Only Sun op een telefoon: de zon levert 4,9 kW, waarvan 4,2 kW naar de auto gaat."></figure>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="h-contact">
+    <div class="wrap reveal">
+      <span class="num">04</span>
+      <h2 id="h-contact">Kennismaken? <em>Een opdracht of samenwerking?</em></h2>
+      <p>Stuur gerust een bericht of een mail. Ik maak graag kennis en denk vrijblijvend mee.</p>
+      <div class="contact-btns">
+      <!-- WhatsApp Business Domein Stam: 06-23906070 (wa.me-notatie: 31 + nummer zonder 0) -->
+      <a class="wa" href="https://wa.me/31623906070" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+        Stuur een WhatsApp
+      </a>
+        <a class="wa wa-line" href="mailto:rens@domeinstam.nl?subject=Kennismaking">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Stuur een e-mail
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Rens Stam · Domein Stam</p>
+    <p>Meedenken. Verbeteren. Realiseren.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document.documentElement; d.classList.add('js');
+  var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(calm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(e){io.observe(e)});
+  }
+})();
+</script>
+</body>
+</html>

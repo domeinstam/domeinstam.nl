@@ -260,6 +260,8 @@ collections:
               - { label: Telefoonnummer (zoals getoond), name: telefoon, widget: string }
               - { label: "Telefoonnummer internationaal (31 zonder 0, voor WhatsApp)", name: telefoon_internationaal, widget: string, pattern: ['^31[0-9]{9}$', 'Bijvoorbeeld 31623906070'] }
               - { label: E-mailadres, name: email, widget: string }
+              - { label: "LinkedIn-adres (leeg = niet tonen)", name: linkedin, widget: string, required: false, pattern: ['^$|^https://(www\.)?linkedin\.com/', 'Begint met https://www.linkedin.com/'] }
+              - { label: Tekst bij LinkedIn, name: linkedin_tekst, widget: string, required: false }
 
           - label: Voettekst
             name: voettekst

@@ -63,9 +63,10 @@ a{color:inherit}
 
 /* ---------- topbalk ---------- */
 .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 0}
-.brand-logo{display:block;flex:none}
-.brand-logo img{display:block;height:60px;width:auto}
-@media (max-width:40rem){.brand-logo img{height:46px}}
+.brand-logo{display:flex;align-items:center;gap:.7rem;flex:none;text-decoration:none;color:var(--forest)}
+.brand-logo img{display:block;height:54px;width:auto}
+.brand-name{font:400 1.12rem/1 var(--serif);letter-spacing:.16em;text-transform:uppercase;padding-top:.15rem}
+@media (max-width:40rem){.brand-logo img{height:46px}.brand-name{display:none}}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font:600 .78rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase}
 .nav{display:flex;gap:1.25rem;font-size:.9rem}
 .nav a{color:var(--muted)}
@@ -363,7 +364,7 @@ footer p{margin:0}
 <div class="hero-shell">
 <div class="wrap">
   <div class="top">
-    <a class="brand-logo" href="./" aria-label="Domein Stam, naar het begin"><picture><source media="(max-width:40rem)" srcset="img/logo/boom-kop.svg" width="284" height="352"><img src="img/logo/logo-kop.svg" width="1395" height="400" alt="Domein Stam"></picture></a>
+    <a class="brand-logo" href="./" aria-label="Domein Stam, naar het begin"><img src="img/logo/boom-kop.svg" width="296" height="364" alt=""><span class="brand-name">Domein Stam</span></a>
     <nav class="nav" aria-label="Hoofdmenu">
       <a class="ul" href="#helpen">Waarmee ik help</a>
       <a class="ul opt" href="#verhaal">Verhaal</a>

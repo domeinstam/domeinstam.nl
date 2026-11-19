@@ -5,12 +5,18 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ t.pagina.titel | escape }}</title>
 <meta name="description" content="{{ t.pagina.beschrijving | escape }}">
 <meta name="author" content="Rens Stam">
 <link rel="canonical" href="https://domeinstam.nl/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://domeinstam.nl/#rens","name":{{ t.intro.naam | jsonify }},"url":"https://domeinstam.nl/","description":{{ t.pagina.beschrijving | jsonify }},"knowsLanguage":"nl","worksFor":{"@id":"https://domeinstam.nl/#domeinstam"}{% if t.contact.linkedin and t.contact.linkedin != "" %},"sameAs":[{{ t.contact.linkedin | jsonify }}]{% endif %}},
+ {"@type":"Organization","@id":"https://domeinstam.nl/#domeinstam","name":"Domein Stam","url":"https://domeinstam.nl/","logo":"https://domeinstam.nl/img/logo/logo-vierkant.png","founder":{"@id":"https://domeinstam.nl/#rens"}},
+ {"@type":"WebSite","@id":"https://domeinstam.nl/#site","url":"https://domeinstam.nl/","name":"Rens Stam","inLanguage":"nl","publisher":{"@id":"https://domeinstam.nl/#domeinstam"}}
+]}
+</script>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Domein Stam">

@@ -1,0 +1,255 @@
+# Sveltia CMS (Decap-compatibel): teksten van domeinstam.nl bewerken op domeinstam.nl/admin.
+# Inloggen met een fine-grained GitHub-token dat alleen deze repo mag bewerken.
+backend:
+  name: github
+  repo: domeinstam/domeinstam.nl
+  branch: main
+  commit_messages:
+    update: "Tekst bijgewerkt via beheer"
+
+site_url: https://domeinstam.nl
+display_url: https://domeinstam.nl
+media_folder: img
+public_folder: /img
+
+collections:
+  - name: teksten
+    label: Teksten
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Teksten van domeinstam.nl
+        file: _data/teksten.yml
+        fields:
+          - label: Pagina (titel in het tabblad en bij delen)
+            name: pagina
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Titel in het tabblad, name: titel, widget: string }
+              - { label: Omschrijving voor zoekmachines, name: beschrijving, widget: text }
+              - { label: "Titel bij delen (LinkedIn, WhatsApp)", name: deel_titel, widget: string }
+              - { label: Omschrijving bij delen, name: deel_beschrijving, widget: text }
+
+          - label: Intro (bovenaan)
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Regel boven de naam, name: kicker, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Ondertitel, name: ondertitel, widget: string }
+              - { label: Introductietekst, name: tekst, widget: text }
+              - { label: Beschikbaarheid, name: beschikbaar, widget: string }
+              - { label: Knop Kennismaken, name: knop_kennismaken, widget: string }
+              - { label: Knop Waarmee ik help, name: knop_helpen, widget: string }
+
+          - label: 01 Waarmee ik kan helpen
+            name: helpen
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: Regel naast de kop, name: ondertitel, widget: string }
+              - label: Blokken
+                name: blokken
+                widget: list
+                label_singular: blok
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: text }
+                  - { label: Linktekst naar contact (mag leeg), name: link_naar_contact, widget: string, required: false }
+
+          - label: 02 Mijn verhaal
+            name: verhaal
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: Regel naast de kop, name: ondertitel, widget: string }
+              - { label: Inleiding (links), name: inleiding, widget: text }
+              - label: Hoofdstukken
+                name: hoofdstukken
+                widget: list
+                label_singular: hoofdstuk
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: text }
+              - { label: Kop van het blok, name: verbindt_titel, widget: string }
+              - label: Alinea's Wat alles verbindt
+                name: verbindt_alineas
+                widget: list
+                label_singular: alinea
+                field: { label: Alinea, name: alinea, widget: text }
+              - { label: Slotregel, name: verbindt_slogan, widget: string }
+              - label: Disciplines
+                name: disciplines
+                widget: list
+                label_singular: discipline
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: string }
+
+          - label: 03 Projecten (koppen)
+            name: projecten
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: Regel naast de kop, name: ondertitel, widget: string }
+              - { label: Tussenkop merken, name: kop_merken, widget: string }
+              - { label: Tussenkop apps, name: kop_apps, widget: string }
+
+          - label: Merk – Adviesdrogisterij.nl
+            name: adviesdrogisterij
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Labels (boven de naam), name: labels, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Kernzin (schuin), name: kern, widget: text }
+              - { label: Tekst, name: tekst, widget: text }
+              - label: Onderwerpen
+                name: onderwerpen
+                widget: list
+                label_singular: onderwerp
+                field: { label: Onderwerp, name: onderwerp, widget: string }
+              - { label: Statuslabel, name: status_label, widget: string, required: false }
+              - { label: Statustekst (leeg = geen statusblok), name: status, widget: text, required: false }
+              - { label: Linktekst, name: link_tekst, widget: string }
+              - { label: Linkadres, name: link_url, widget: string }
+
+          - label: Merk – PhytoForsan
+            name: phytoforsan
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Labels (boven de naam), name: labels, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Kernzin (schuin), name: kern, widget: text }
+              - { label: Tekst, name: tekst, widget: text }
+              - label: Onderwerpen
+                name: onderwerpen
+                widget: list
+                label_singular: onderwerp
+                field: { label: Onderwerp, name: onderwerp, widget: string }
+              - { label: Statuslabel, name: status_label, widget: string, required: false }
+              - { label: Statustekst (leeg = geen statusblok), name: status, widget: text, required: false }
+              - { label: Linktekst, name: link_tekst, widget: string }
+              - { label: Linkadres, name: link_url, widget: string }
+
+          - label: Merk – Health of Nature
+            name: healthofnature
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Labels (boven de naam), name: labels, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Kernzin (schuin), name: kern, widget: text }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Extra alinea (lichter), name: extra, widget: text, required: false }
+              - { label: Linktekst, name: link_tekst, widget: string }
+              - { label: Linkadres, name: link_url, widget: string }
+
+          - label: App – Atempo
+            name: atempo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+
+          - label: App – Restavia
+            name: restavia
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knoptekst, name: knop, widget: string }
+
+          - label: Project – Antwoorden Adviesdrogisterij.nl
+            name: antwoorden
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Regel onder de naam, name: slogan, widget: string }
+              - label: Alinea's
+                name: alineas
+                widget: list
+                label_singular: alinea
+                field: { label: Alinea, name: alinea, widget: text }
+              - { label: Tekst bij het slotje, name: slot, widget: string }
+              - { label: Knoptekst, name: knop, widget: string }
+              - { label: Kleine lettertjes, name: kleine_lettertjes, widget: text }
+              - label: Stappen
+                name: stappen
+                widget: list
+                label_singular: stap
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: string }
+
+          - label: App – Only Sun
+            name: onlysun
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Status, name: status, widget: string }
+              - { label: Naam, name: naam, widget: string }
+              - { label: Slogan, name: slogan, widget: string }
+              - label: Alinea's
+                name: alineas
+                widget: list
+                label_singular: alinea
+                field: { label: Alinea, name: alinea, widget: text }
+              - { label: Tekst bij het slotje, name: slot, widget: string }
+              - label: Stappen
+                name: stappen
+                widget: list
+                label_singular: stap
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: string }
+
+          - label: 04 Contact
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Kop, name: titel, widget: string }
+              - { label: "Kop (tweede deel, schuin)", name: titel_accent, widget: string }
+              - { label: Tekst, name: tekst, widget: text }
+              - { label: Knop WhatsApp, name: knop_whatsapp, widget: string }
+              - { label: Knop e-mail, name: knop_email, widget: string }
+              - { label: Onderwerp van de e-mail, name: email_onderwerp, widget: string }
+              - { label: Tekst voor het telefoonnummer, name: telefoon_label, widget: string }
+              - { label: Telefoonnummer (zoals getoond), name: telefoon, widget: string }
+              - { label: "Telefoonnummer internationaal (31 zonder 0, voor WhatsApp)", name: telefoon_internationaal, widget: string, pattern: ['^31[0-9]{9}$', 'Bijvoorbeeld 31623906070'] }
+              - { label: E-mailadres, name: email, widget: string }
+
+          - label: Voettekst
+            name: voettekst
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Naam en jaar, name: naam, widget: string }
+              - { label: KvK-nummer, name: kvk, widget: string }
+              - { label: Btw-id, name: btw, widget: string }
+              - { label: Slotregel, name: slogan, widget: string }

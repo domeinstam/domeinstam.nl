@@ -1,18 +1,21 @@
-<!doctype html>
+---
+# Teksten staan in _data/teksten.yml en zijn te bewerken via /admin
+---
+{% assign t = site.data.teksten %}<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rens Stam · Ondernemer, organisator, probleemoplosser</title>
-<meta name="description" content="Rens Stam (Domein Stam): ondernemer, organisator en probleemoplosser. Organisatie- en procesverbetering, sparring, tijdelijke ondersteuning, IT, AI en commerciële vraagstukken.">
+<title>{{ t.pagina.titel | escape }}</title>
+<meta name="description" content="{{ t.pagina.beschrijving | escape }}">
 <meta name="author" content="Rens Stam">
 <link rel="canonical" href="https://domeinstam.nl/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Domein Stam">
-<meta property="og:title" content="Rens Stam · Ondernemer, organisator, probleemoplosser">
-<meta property="og:description" content="Meedenken. Verbeteren. Realiseren. Beschikbaar voor opdrachten, projecten en passende samenwerkingen.">
+<meta property="og:title" content="{{ t.pagina.deel_titel | escape }}">
+<meta property="og:description" content="{{ t.pagina.deel_beschrijving | escape }}">
 <meta property="og:url" content="https://domeinstam.nl/">
 <link rel="icon" href="data:,">
 <meta name="theme-color" content="#F4EFE5">
@@ -329,7 +332,7 @@ footer p{margin:0}
 <div class="hero-shell">
 <div class="wrap">
   <div class="top">
-    <a class="brand" href="./" aria-label="Rens Stam, naar het begin">Rens Stam</a>
+    <a class="brand" href="./" aria-label="{{ t.intro.naam | escape }}, naar het begin">{{ t.intro.naam | escape }}</a>
     <nav class="nav" aria-label="Hoofdmenu">
       <a class="ul" href="#helpen">Waarmee ik help</a>
       <a class="ul opt" href="#verhaal">Verhaal</a>
@@ -340,13 +343,13 @@ footer p{margin:0}
 
   <header class="hero">
     <div>
-      <p class="kicker">Domein Stam · Meedenken. Verbeteren. Realiseren.</p>
-      <h1><span class="l1">Rens Stam</span> <span class="l2">Ondernemer. Organisator. Probleemoplosser.</span></h1>
-      <p class="lead">Ik leerde ondernemen op de winkelvloer van mijn eigen drogisterij en bouwde daarna aan webshops, merken en digitale toepassingen. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ik ga daarbij graag zelf aan de slag.</p>
-      <p class="avail">Beschikbaar voor opdrachten, projecten en passende samenwerkingen.</p>
+      <p class="kicker">{{ t.intro.kicker | escape }}</p>
+      <h1><span class="l1">{{ t.intro.naam | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
+      <p class="lead">{{ t.intro.tekst | escape }}</p>
+      <p class="avail">{{ t.intro.beschikbaar | escape }}</p>
       <div class="hero-ctas">
-        <a class="pill pill-solid" href="#contact">Kennismaken <span class="arr" aria-hidden="true">→</span></a>
-        <a class="pill pill-line" href="#helpen">Waarmee ik help</a>
+        <a class="pill pill-solid" href="#contact">{{ t.intro.knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="pill pill-line" href="#helpen">{{ t.intro.knop_helpen | escape }}</a>
       </div>
     </div>
 
@@ -376,55 +379,39 @@ footer p{margin:0}
   <section class="sec" id="helpen" aria-labelledby="h-helpen">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="num">01</span><h2 id="h-helpen">Waarmee ik kan helpen</h2></div>
-        <p>Niet alleen meedenken, maar ook zelf aan de slag.</p>
+        <div><span class="num">01</span><h2 id="h-helpen">{{ t.helpen.titel | escape }}</h2></div>
+        <p>{{ t.helpen.ondertitel | escape }}</p>
       </div>
       <ul class="help">
-        <li class="reveal"><h3>Het loopt organisatorisch vast</h3><p>Ik breng processen in kaart, richt werkzaamheden opnieuw in en voer verbeteringen ook echt door.</p></li>
-        <li class="reveal"><h3>Je zoekt een sparringpartner</h3><p>Ik denk onafhankelijk mee over ideeën, strategie en belangrijke zakelijke beslissingen.</p></li>
-        <li class="reveal"><h3>Tijdelijk extra capaciteit</h3><p>Ik pak een project op, breng structuur aan en werk praktisch mee.</p></li>
-        <li class="reveal"><h3>Slimmer werken</h3><p>Ik onderzoek wat bestaande software, automatisering en AI concreet kunnen opleveren.</p></li>
-        <li class="reveal"><h3>Commerciële ontwikkeling</h3><p>Ik denk mee over e-commerce, verkoop, producten, merken en distributie.</p></li>
-        <li class="reveal"><h3>Iets anders?</h3><p>Staat jouw vraagstuk er niet tussen? <a class="ul" href="#contact">Vertel het me gerust.</a></p></li>
-      </ul>
+{% for b in t.helpen.blokken %}        <li class="reveal"><h3>{{ b.titel | escape }}</h3><p>{{ b.tekst | escape }}{% if b.link_naar_contact %} <a class="ul" href="#contact">{{ b.link_naar_contact | escape }}</a>{% endif %}</p></li>
+{% endfor %}      </ul>
     </div>
   </section>
 
   <section class="sec about" id="verhaal" aria-labelledby="h-verhaal">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="num">02</span><h2 id="h-verhaal">Mijn verhaal</h2></div>
-        <p>Van de winkelvloer naar webshops, merken en digitale toepassingen.</p>
+        <div><span class="num">02</span><h2 id="h-verhaal">{{ t.verhaal.titel | escape }}</h2></div>
+        <p>{{ t.verhaal.ondertitel | escape }}</p>
       </div>
       <div class="about-grid">
         <aside class="about-side reveal">
-          <p class="story-lead">Mijn ondernemersloopbaan begon met een eigen drogisterij, die ik vanaf mijn 25e jarenlang heb gerund. Vanuit de fysieke detailhandel ontwikkelde ik mij verder in e-commerce, merkontwikkeling en digitale innovatie.</p>
+          <p class="story-lead">{{ t.verhaal.inleiding | escape }}</p>
         </aside>
         <div class="about-main">
           <ol class="chapters" aria-label="Mijn loopbaan">
-            <li class="reveal"><h3>De winkel</h3><p>Als gecertificeerd drogist met een eigen fysieke drogisterij legde ik de basis: kennis van de gezondheidsbranche en ondernemen in de praktijk.</p></li>
-            <li class="reveal"><h3>De webshop</h3><p>Met Adviesdrogisterij.nl ging ik in 2014 online, tot ik de webshop in 2026 overdroeg. Daar was ik betrokken bij vrijwel alles: commercie en marketing, inkoop en leveranciers, logistiek, personeel, financiën, organisatie en IT.</p></li>
-            <li class="reveal"><h3>De merken</h3><p>Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij.</p></li>
-            <li class="reveal"><h3>Digitale innovatie</h3><p>Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen, zoals Atempo, Restavia, Only Sun en Antwoorden Adviesdrogisterij.nl.</p></li>
-          </ol>
+{% for h in t.verhaal.hoofdstukken %}            <li class="reveal"><h3>{{ h.titel | escape }}</h3><p>{{ h.tekst | escape }}</p></li>
+{% endfor %}          </ol>
 
           <div class="connect reveal">
-            <h3>Wat alles verbindt</h3>
-            <p>Mijn achtergrond ligt in de detailhandel, e-commerce en gezondheidsbranche, waarin ik inmiddels twintig jaar ervaring heb. Daarnaast beschik ik over een juridische opleiding en een brede praktische IT-achtergrond.</p>
-            <p>Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen.</p>
-            <p>Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen.</p>
-            <p>Met Domein Stam ondersteun ik ondernemers en organisaties als sparringpartner, organisatieverbeteraar en hands-on professional.</p>
-            <p class="sign">Meedenken. Verbeteren. Realiseren.</p>
+            <h3>{{ t.verhaal.verbindt_titel | escape }}</h3>
+{% for a in t.verhaal.verbindt_alineas %}            <p>{{ a | escape }}</p>
+{% endfor %}            <p class="sign">{{ t.verhaal.verbindt_slogan | escape }}</p>
           </div>
 
           <dl class="disciplines reveal">
-            <div><dt>Gezondheid</dt><dd>Twintig jaar in de branche, gecertificeerd drogist.</dd></div>
-            <div><dt>Ondernemerschap</dt><dd>Commercie, inkoop, verkoop en leveranciers, met oog voor haalbaarheid.</dd></div>
-            <div><dt>Organisatieverbetering</dt><dd>Organisatieontwikkeling en efficiëntere bedrijfsprocessen.</dd></div>
-            <div><dt>Juridische blik</dt><dd>Oog voor regelgeving, verantwoordelijkheden, afspraken en risico's.</dd></div>
-            <div><dt>IT &amp; AI</dt><dd>Een brede praktische IT-achtergrond; AI gericht ingezet.</dd></div>
-            <div><dt>Hands-on</dt><dd>Van eerste idee tot werkende toepassing.</dd></div>
-          </dl>
+{% for d in t.verhaal.disciplines %}            <div><dt>{{ d.titel | escape }}</dt><dd>{{ d.tekst | escape }}</dd></div>
+{% endfor %}          </dl>
         </div>
       </div>
     </div>
@@ -433,25 +420,25 @@ footer p{margin:0}
   <section class="sec biz-sec" id="projecten" aria-labelledby="h-projecten">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="num">03</span><h2 id="h-projecten">Ondernemingen, merken en projecten</h2></div>
-        <p>Voorbeelden van wat ik heb opgebouwd, ontwikkeld en gemaakt.</p>
+        <div><span class="num">03</span><h2 id="h-projecten">{{ t.projecten.titel | escape }}</h2></div>
+        <p>{{ t.projecten.ondertitel | escape }}</p>
       </div>
-      <h3 class="sub-head reveal">Ondernemingen &amp; merken</h3>
+      <h3 class="sub-head reveal">{{ t.projecten.kop_merken | escape }}</h3>
       <ul class="brands">
         <li class="reveal">
           <article class="brand-card" aria-labelledby="h-ad">
             <div class="b-visual ad-panel"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/ad-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de webshop adviesdrogisterij.nl met menu en banners."></figure></div>
             <div class="b-body">
               <img class="b-mark b-mark-wide" src="img/adviesdrogisterij-logo.svg" width="783" height="93" loading="lazy" decoding="async" alt="Logo Adviesdrogisterij.nl">
-              <p class="v-tags">E-commerce · Ondernemerschap · Gezondheid · 2014–2026</p>
-              <h3 id="h-ad" class="v-name">Adviesdrogisterij.nl</h3>
-              <p class="b-lead">Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf.</p>
-              <p>Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik van 2014 tot 2026 heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering.</p>
+              <p class="v-tags">{{ t.adviesdrogisterij.labels | escape }}</p>
+              <h3 id="h-ad" class="v-name">{{ t.adviesdrogisterij.naam | escape }}</h3>
+              <p class="b-lead">{{ t.adviesdrogisterij.kern | escape }}</p>
+              <p>{{ t.adviesdrogisterij.tekst | escape }}</p>
               <ul class="b-chips" aria-label="Betrokken bij">
-                <li>Commercie &amp; online marketing</li><li>E-commerce</li><li>Inkoop &amp; leveranciers</li><li>Logistiek &amp; voorraad</li><li>Personeel</li><li>Organisatie&shy;ontwikkeling</li><li>Procesverbetering</li><li>Financiën</li><li>IT &amp; automatisering</li>
+                {% for o in t.adviesdrogisterij.onderwerpen %}<li>{{ o | escape }}</li>{% endfor %}
               </ul>
-              <p class="v-status"><span class="v-badge">Overgedragen</span> In november 2026 overgedragen aan een nieuwe eigenaar. Het is geen onderdeel meer van Domein Stam.</p>
-              <a class="v-link ul" href="https://www.adviesdrogisterij.nl/" rel="noopener">adviesdrogisterij.nl <span aria-hidden="true">↗</span></a>
+{% if t.adviesdrogisterij.status %}              <p class="v-status"><span class="v-badge">{{ t.adviesdrogisterij.status_label | escape }}</span> {{ t.adviesdrogisterij.status | escape }}</p>
+{% endif %}              <a class="v-link ul" href="{{ t.adviesdrogisterij.link_url | escape }}" rel="noopener">{{ t.adviesdrogisterij.link_tekst | escape }} <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </li>
@@ -460,15 +447,15 @@ footer p{margin:0}
             <div class="b-visual ad-panel panel-pf"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/pf-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de website phytoforsan.nl met menu, Force of Nature en magnesiumproducten."></figure></div>
             <div class="b-body">
               <img class="b-mark b-mark-tall" src="img/phytoforsan-logo.png" width="480" height="386" loading="lazy" decoding="async" alt="Logo PhytoForsan">
-              <p class="v-tags">Merkontwikkeling · Gezondheid · Productontwikkeling · tot 2026</p>
-              <h3 id="h-pf" class="v-name">PhytoForsan</h3>
-              <p class="b-lead">Ervaring met het ontwikkelen en positioneren van eigen gezondheidsproducten.</p>
-              <p>Een merk binnen de gezondheidsbranche dat ik heb ontwikkeld, met ervaring in productontwikkeling, positionering en commerciële exploitatie. Het laat mijn belangstelling zien voor het ontwikkelen van producten en merken, van het eerste concept tot de praktische uitvoering.</p>
+              <p class="v-tags">{{ t.phytoforsan.labels | escape }}</p>
+              <h3 id="h-pf" class="v-name">{{ t.phytoforsan.naam | escape }}</h3>
+              <p class="b-lead">{{ t.phytoforsan.kern | escape }}</p>
+              <p>{{ t.phytoforsan.tekst | escape }}</p>
               <ul class="b-chips" aria-label="Betrokken bij">
-                <li>Productontwikkeling</li><li>Merkpositionering</li><li>Supplementen</li><li>Wellness</li><li>Commerciële exploitatie</li>
+                {% for o in t.phytoforsan.onderwerpen %}<li>{{ o | escape }}</li>{% endfor %}
               </ul>
-              <p class="v-status"><span class="v-badge">Overgedragen</span> In 2026 samen met Adviesdrogisterij.nl overgedragen. Het merk is mijn initiatief, maar geen onderdeel meer van Domein Stam.</p>
-              <a class="v-link ul" href="https://www.phytoforsan.nl/" rel="noopener">phytoforsan.nl <span aria-hidden="true">↗</span></a>
+{% if t.phytoforsan.status %}              <p class="v-status"><span class="v-badge">{{ t.phytoforsan.status_label | escape }}</span> {{ t.phytoforsan.status | escape }}</p>
+{% endif %}              <a class="v-link ul" href="{{ t.phytoforsan.link_url | escape }}" rel="noopener">{{ t.phytoforsan.link_tekst | escape }} <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </li>
@@ -477,38 +464,38 @@ footer p{margin:0}
             <div class="b-visual ad-panel panel-hon"><figure class="browser"><span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></span><img src="img/hon-webshop.jpg" width="800" height="448" loading="lazy" decoding="async" alt="Bovenkant van de webshop healthofnature.nl met menu en Natural Green Chlorella."></figure></div>
             <div class="b-body">
               <img class="b-mark" src="img/hon-logo.png" width="400" height="129" loading="lazy" decoding="async" alt="Logo Health of Nature">
-              <p class="v-tags">Gezondheid · Import &amp; distributie · Merkontwikkeling</p>
-              <h3 id="h-hon" class="v-name">Health of Nature</h3>
-              <p class="b-lead">Ervaring met handel, distributie en commerciële ontwikkeling van natuurlijke gezondheidsproducten.</p>
-              <p>Vanuit Domein Stam houd ik mij bezig met Health of Nature, een merk binnen de markt voor natuurlijke gezondheidsproducten. Met onder andere Natural Green Chlorella en Spirulina richt het merk zich op de distributie en commerciële ontwikkeling van voedingssupplementen.</p>
-              <p class="v-quiet">Hier komen twintig jaar branche-ervaring samen met inkoop, leveranciersrelaties, groothandel, merkpositionering en commerciële bedrijfsvoering.</p>
-              <a class="v-link ul" href="https://www.healthofnature.nl/" rel="noopener">healthofnature.nl <span aria-hidden="true">↗</span></a>
+              <p class="v-tags">{{ t.healthofnature.labels | escape }}</p>
+              <h3 id="h-hon" class="v-name">{{ t.healthofnature.naam | escape }}</h3>
+              <p class="b-lead">{{ t.healthofnature.kern | escape }}</p>
+              <p>{{ t.healthofnature.tekst | escape }}</p>
+{% if t.healthofnature.extra %}              <p class="v-quiet">{{ t.healthofnature.extra | escape }}</p>
+{% endif %}              <a class="v-link ul" href="{{ t.healthofnature.link_url | escape }}" rel="noopener">{{ t.healthofnature.link_tekst | escape }} <span aria-hidden="true">↗</span></a>
             </div>
           </article>
         </li>
       </ul>
 
 
-      <h3 class="sub-head reveal">Digitale toepassingen</h3>
+      <h3 class="sub-head reveal">{{ t.projecten.kop_apps | escape }}</h3>
       <div class="feat-grid">
         <article class="feat atempo reveal">
           <div class="feat-text">
-            <ul class="tags"><li class="tag">Gezondheid &amp; beweging</li><li class="tag status">In ontwikkeling</li></ul>
-            <h3><a href="https://apps.domeinstam.nl/trainingsplan/">Atempo</a></h3>
-            <p class="slogan">Move. Recover. Grow.</p>
-            <p class="desc">Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.</p>
-            <span class="cta" aria-hidden="true">Open Atempo <span class="arr">→</span></span>
+            <ul class="tags"><li class="tag">{{ t.atempo.label | escape }}</li><li class="tag status">{{ t.atempo.status | escape }}</li></ul>
+            <h3><a href="https://apps.domeinstam.nl/trainingsplan/">{{ t.atempo.naam | escape }}</a></h3>
+            <p class="slogan">{{ t.atempo.slogan | escape }}</p>
+            <p class="desc">{{ t.atempo.tekst | escape }}</p>
+            <span class="cta" aria-hidden="true">{{ t.atempo.knop | escape }} <span class="arr">→</span></span>
           </div>
           <figure class="phone"><img src="img/atempo.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Atempo op een telefoon: het scherm Vandaag met de Atempo Coach."></figure>
         </article>
 
         <article class="feat restavia reveal">
           <div class="feat-text">
-            <ul class="tags"><li class="tag">Ontspanning</li><li class="tag status">In ontwikkeling</li></ul>
-            <h3><a href="https://app.phytoforsan.nl/">Restavia</a></h3>
-            <p class="slogan">Breathe. Feel. Flow.</p>
-            <p class="desc">Een digitale toepassing gericht op ademhaling, humming en ontspanning.</p>
-            <span class="cta" aria-hidden="true">Open Restavia <span class="arr">→</span></span>
+            <ul class="tags"><li class="tag">{{ t.restavia.label | escape }}</li><li class="tag status">{{ t.restavia.status | escape }}</li></ul>
+            <h3><a href="https://app.phytoforsan.nl/">{{ t.restavia.naam | escape }}</a></h3>
+            <p class="slogan">{{ t.restavia.slogan | escape }}</p>
+            <p class="desc">{{ t.restavia.tekst | escape }}</p>
+            <span class="cta" aria-hidden="true">{{ t.restavia.knop | escape }} <span class="arr">→</span></span>
           </div>
           <figure class="phone"><img src="img/restavia.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."></figure>
         </article>
@@ -516,42 +503,34 @@ footer p{margin:0}
 
       <article class="biz reveal">
         <div>
-          <ul class="tags"><li class="tag status">Zakelijk praktijkvoorbeeld</li></ul>
-          <h3><a href="https://apps.domeinstam.nl/Antwoorden-Adviesdrogisterij.nl/">Antwoorden Adviesdrogisterij.nl</a></h3>
-          <p class="slogan">Gezondheid · Ondernemerschap · AI · Digitale innovatie</p>
-          <p class="desc">Een digitale toepassing ter ondersteuning van de klantcommunicatie binnen Adviesdrogisterij.nl. Ontwikkeld vanuit jarenlange praktijkervaring in de drogisterij- en gezondheidsbranche, gecombineerd met kennis van bedrijfsvoering, klantcommunicatie en digitale technologie.</p>
-          <p class="desc">Het project laat zien hoe ik branchekennis, zakelijke inzichten en zorgvuldigheid combineer bij het ontwikkelen van praktische AI-oplossingen.</p>
-          <div>
-            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Bestaande toepassing · alleen toegankelijk via inlogscherm</span>
+          <ul class="tags"><li class="tag status">{{ t.antwoorden.status | escape }}</li></ul>
+          <h3><a href="https://apps.domeinstam.nl/Antwoorden-Adviesdrogisterij.nl/">{{ t.antwoorden.naam | escape }}</a></h3>
+          <p class="slogan">{{ t.antwoorden.slogan | escape }}</p>
+{% for a in t.antwoorden.alineas %}          <p class="desc">{{ a | escape }}</p>
+{% endfor %}          <div>
+            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{{ t.antwoorden.slot | escape }}</span>
           </div>
-          <span class="cta" aria-hidden="true">Naar het inlogscherm <span class="arr">→</span></span>
-          <p class="fine">Een hulpmiddel voor medewerkers; het geeft zelf geen medisch of juridisch advies. Ontwikkeld voor gebruik binnen Adviesdrogisterij.nl.</p>
+          <span class="cta" aria-hidden="true">{{ t.antwoorden.knop | escape }} <span class="arr">→</span></span>
+          <p class="fine">{{ t.antwoorden.kleine_lettertjes | escape }}</p>
         </div>
         <ol class="flow" aria-label="Zo werkt het hulpmiddel">
-          <li><div><b>Klantvraag</b><span>De mail van de klant gaat de app in.</span></div></li>
-          <li><div><b>Conceptantwoord</b><span>AI stelt een concept op met de eigen instructies en kennisbank.</span></div></li>
-          <li><div><b>Controle</b><span>Het concept wordt nagelopen op de huisregels.</span></div></li>
-          <li><div><b>Medewerker</b><span>Past het antwoord waar nodig aan en neemt het over.</span></div></li>
-        </ol>
+{% for s in t.antwoorden.stappen %}          <li><div><b>{{ s.titel | escape }}</b><span>{{ s.tekst | escape }}</span></div></li>
+{% endfor %}        </ol>
       </article>
 
       <article class="biz sun reveal">
         <svg class="sun-art" viewBox="0 0 300 300" aria-hidden="true" focusable="false"><g fill="none" stroke="#E3A73A" stroke-width="1.5"><circle cx="150" cy="150" r="140" opacity=".35"/><circle cx="150" cy="150" r="116" opacity=".45"/><circle cx="150" cy="150" r="92" opacity=".6"/><circle cx="150" cy="150" r="70" opacity=".8"/></g><circle cx="150" cy="150" r="48" fill="#F2B53C"/></svg>
         <div>
-          <ul class="tags"><li class="tag">Zonne-energie</li><li class="tag status">Eigen gebruik</li></ul>
-          <h3>Only Sun</h3>
-          <p class="slogan">Laden op de zon.</p>
-          <p class="desc">Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger.</p>
-          <p class="desc">Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster.</p>
-          <div>
-            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Draait lokaal · niet openbaar</span>
+          <ul class="tags"><li class="tag">{{ t.onlysun.label | escape }}</li><li class="tag status">{{ t.onlysun.status | escape }}</li></ul>
+          <h3>{{ t.onlysun.naam | escape }}</h3>
+          <p class="slogan">{{ t.onlysun.slogan | escape }}</p>
+{% for a in t.onlysun.alineas %}          <p class="desc">{{ a | escape }}</p>
+{% endfor %}          <div>
+            <span class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>{{ t.onlysun.slot | escape }}</span>
           </div>
           <ol class="flow" aria-label="Zo werkt Only Sun">
-            <li><div><b>Zon meten</b><span>Wat de panelen opwekken en het huis verbruikt.</span></div></li>
-            <li><div><b>Overschot berekenen</b><span>Hoeveel zonnestroom er over is voor de auto.</span></div></li>
-            <li><div><b>Meebewegen</b><span>De laadpaal laadt mee met de zon.</span></div></li>
-            <li><div><b>Nacht</b><span>Wat de zon niet haalt, volgt 's nachts volgens plan.</span></div></li>
-          </ol>
+{% for s in t.onlysun.stappen %}            <li><div><b>{{ s.titel | escape }}</b><span>{{ s.tekst | escape }}</span></div></li>
+{% endfor %}          </ol>
         </div>
         <figure class="phone"><img src="img/onlysun.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Voorbeeld van Only Sun op een telefoon: de zon levert 4,9 kW, waarvan 4,2 kW naar de auto gaat."></figure>
       </article>
@@ -562,28 +541,27 @@ footer p{margin:0}
   <section class="contact" id="contact" aria-labelledby="h-contact">
     <div class="wrap reveal">
       <span class="num">04</span>
-      <h2 id="h-contact">Kennismaken? <em>Een opdracht of samenwerking?</em></h2>
-      <p>Stuur gerust een bericht of een mail. Ik maak graag kennis en denk vrijblijvend mee.</p>
+      <h2 id="h-contact">{{ t.contact.titel | escape }} <em>{{ t.contact.titel_accent | escape }}</em></h2>
+      <p>{{ t.contact.tekst | escape }}</p>
       <div class="contact-btns">
-      <!-- WhatsApp Business Domein Stam: 06-23906070 (wa.me-notatie: 31 + nummer zonder 0) -->
-      <a class="wa" href="https://wa.me/31623906070" rel="noopener">
+      <a class="wa" href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
-        Stuur een WhatsApp
+        {{ t.contact.knop_whatsapp | escape }}
       </a>
-        <a class="wa wa-line" href="mailto:rens@domeinstam.nl?subject=Kennismaking">
+        <a class="wa wa-line" href="mailto:{{ t.contact.email | escape }}?subject={{ t.contact.email_onderwerp | uri_escape }}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          Stuur een e-mail
+          {{ t.contact.knop_email | escape }}
         </a>
       </div>
-      <p class="wa-note">Telefoon en WhatsApp <a class="ul" href="tel:+31623906070">06-23906070</a> · <a class="ul" href="mailto:rens@domeinstam.nl">rens@domeinstam.nl</a></p>
+      <p class="wa-note">{{ t.contact.telefoon_label | escape }} <a class="ul" href="tel:+{{ t.contact.telefoon_internationaal | escape }}">{{ t.contact.telefoon | escape }}</a> · <a class="ul" href="mailto:{{ t.contact.email | escape }}">{{ t.contact.email | escape }}</a></p>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Rens Stam · Domein Stam · KvK 92370802 · btw-id NL004949180B47</p>
-    <p>Meedenken. Verbeteren. Realiseren.</p>
+    <p>{{ t.voettekst.naam | escape }} · KvK {{ t.voettekst.kvk | escape }} · btw-id {{ t.voettekst.btw | escape }}</p>
+    <p>{{ t.voettekst.slogan | escape }}</p>
   </div>
 </footer>
 

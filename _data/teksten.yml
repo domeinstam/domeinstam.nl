@@ -1,193 +1,182 @@
-# Alle teksten van domeinstam.nl. Bewerkbaar via domeinstam.nl/admin (Decap CMS).
-# De opmaak staat in index.html; hier alleen tekst.
-
 pagina:
-  titel: "Rens Stam · Ondernemer, organisator, probleemoplosser"
-  beschrijving: "Rens Stam (Domein Stam): ondernemer, organisator en probleemoplosser. Organisatie- en procesverbetering, sparring, tijdelijke ondersteuning, IT, AI en commerciële vraagstukken."
-  deel_titel: "Rens Stam · Ondernemer, organisator, probleemoplosser"
-  deel_beschrijving: "Meedenken. Verbeteren. Realiseren. Beschikbaar voor opdrachten, projecten en passende samenwerkingen."
-
+  titel: Rens Stam · Ondernemend, organisator, probleemoplosser
+  beschrijving: 'Rens Stam (Domein Stam): ondernemer, organisator en probleemoplosser. Organisatie- en procesverbetering, sparring, tijdelijke ondersteuning, IT, AI en commerciële vraagstukken.'
+  deel_titel: Rens Stam · Ondernemer, organisator, probleemoplosser
+  deel_beschrijving: Meedenken. Verbeteren. Realiseren. Beschikbaar voor opdrachten, projecten en passende samenwerkingen.
 intro:
-  kicker: "Domein Stam · Meedenken. Verbeteren. Realiseren."
-  naam: "Rens Stam"
-  ondertitel: "Ondernemer. Organisator. Probleemoplosser."
-  tekst: "Ik leerde ondernemen op de winkelvloer van mijn eigen drogisterij en bouwde daarna aan webshops, merken en digitale toepassingen. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ik ga daarbij graag zelf aan de slag."
-  beschikbaar: "Beschikbaar voor opdrachten, projecten en passende samenwerkingen."
-  knop_kennismaken: "Kennismaken"
-  knop_helpen: "Waarmee ik help"
-
+  kicker: Domein Stam · Meedenken. Verbeteren. Realiseren.
+  naam: Rens Stam
+  ondertitel: Ondernemer. Organisator. Probleemoplosser.
+  tekst: Ik leerde ondernemen op de winkelvloer van mijn eigen drogisterij en bouwde daarna aan webshops, merken en digitale toepassingen. Ik help ondernemers en organisaties om problemen te doorgronden, processen te verbeteren en nieuwe mogelijkheden te realiseren, en ik ga daarbij graag zelf aan de slag.
+  beschikbaar: Beschikbaar voor opdrachten, projecten en passende samenwerkingen.
+  knop_kennismaken: Kennismaken
+  knop_helpen: Waarmee ik help
 helpen:
-  titel: "Waarmee ik kan helpen"
-  ondertitel: "Niet alleen meedenken, maar ook zelf aan de slag."
+  titel: Waarmee ik kan helpen
+  ondertitel: Niet alleen meedenken, maar ook zelf aan de slag.
   blokken:
-    - titel: "Het loopt organisatorisch vast"
-      tekst: "Ik breng processen in kaart, richt werkzaamheden opnieuw in en voer verbeteringen ook echt door."
-    - titel: "Je zoekt een sparringpartner"
-      tekst: "Ik denk onafhankelijk mee over ideeën, strategie en belangrijke zakelijke beslissingen."
-    - titel: "Tijdelijk extra capaciteit"
-      tekst: "Ik pak een project op, breng structuur aan en werk praktisch mee."
-    - titel: "Slimmer werken"
-      tekst: "Ik onderzoek wat bestaande software, automatisering en AI concreet kunnen opleveren."
-    - titel: "Commerciële ontwikkeling"
-      tekst: "Ik denk mee over e-commerce, verkoop, producten, merken en distributie."
-    - titel: "Iets anders?"
-      tekst: "Staat jouw vraagstuk er niet tussen?"
-      link_naar_contact: "Vertel het me gerust."
-
+    - titel: Het loopt organisatorisch vast
+      tekst: Ik breng processen in kaart, richt werkzaamheden opnieuw in en voer verbeteringen ook echt door.
+      link_naar_contact: ''
+    - titel: Je zoekt een sparringpartner
+      tekst: Ik denk onafhankelijk mee over ideeën, strategie en belangrijke zakelijke beslissingen.
+      link_naar_contact: ''
+    - titel: Tijdelijk extra capaciteit
+      tekst: Ik pak een project op, breng structuur aan en werk praktisch mee.
+      link_naar_contact: ''
+    - titel: Slimmer werken
+      tekst: Ik onderzoek wat bestaande software, automatisering en AI concreet kunnen opleveren.
+      link_naar_contact: ''
+    - titel: Commerciële ontwikkeling
+      tekst: Ik denk mee over e-commerce, verkoop, producten, merken en distributie.
+      link_naar_contact: ''
+    - titel: Iets anders?
+      tekst: Staat jouw vraagstuk er niet tussen?
+      link_naar_contact: Vertel het me gerust.
 verhaal:
-  titel: "Mijn verhaal"
-  ondertitel: "Van de winkelvloer naar webshops, merken en digitale toepassingen."
-  inleiding: "Mijn ondernemersloopbaan begon met een eigen drogisterij, die ik vanaf mijn 25e jarenlang heb gerund. Vanuit de fysieke detailhandel ontwikkelde ik mij verder in e-commerce, merkontwikkeling en digitale innovatie."
+  titel: Mijn verhaal
+  ondertitel: Van de winkelvloer naar webshops, merken en digitale toepassingen.
+  inleiding: Mijn ondernemersloopbaan begon met een eigen drogisterij, die ik vanaf mijn 25e jarenlang heb gerund. Vanuit de fysieke detailhandel ontwikkelde ik mij verder in e-commerce, merkontwikkeling en digitale innovatie.
   hoofdstukken:
-    - titel: "De winkel"
-      tekst: "Als gecertificeerd drogist met een eigen fysieke drogisterij legde ik de basis: kennis van de gezondheidsbranche en ondernemen in de praktijk."
-    - titel: "De webshop"
-      tekst: "Met Adviesdrogisterij.nl ging ik in 2014 online, tot ik de webshop in 2026 overdroeg. Daar was ik betrokken bij vrijwel alles: commercie en marketing, inkoop en leveranciers, logistiek, personeel, financiën, organisatie en IT."
-    - titel: "De merken"
-      tekst: "Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij."
-    - titel: "Digitale innovatie"
-      tekst: "Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen, zoals Atempo, Restavia, Only Sun en Antwoorden Adviesdrogisterij.nl."
-  verbindt_titel: "Wat alles verbindt"
+    - titel: De winkel
+      tekst: 'Als gecertificeerd drogist met een eigen fysieke drogisterij legde ik de basis: kennis van de gezondheidsbranche en ondernemen in de praktijk.'
+    - titel: De webshop
+      tekst: 'Met Adviesdrogisterij.nl ging ik in 2014 online, tot ik de webshop in 2026 overdroeg. Daar was ik betrokken bij vrijwel alles: commercie en marketing, inkoop en leveranciers, logistiek, personeel, financiën, organisatie en IT.'
+    - titel: De merken
+      tekst: Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij.
+    - titel: Digitale innovatie
+      tekst: Nu zet ik technologie en AI in om processen te verbeteren en praktische toepassingen te bouwen, zoals Atempo, Restavia, Only Sun en Antwoorden Adviesdrogisterij.nl.
+  verbindt_titel: Wat alles verbindt
   verbindt_alineas:
-    - "Mijn achtergrond ligt in de detailhandel, e-commerce en gezondheidsbranche, waarin ik inmiddels twintig jaar ervaring heb. Daarnaast beschik ik over een juridische opleiding en een brede praktische IT-achtergrond."
-    - "Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen."
-    - "Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen."
-    - "Met Domein Stam ondersteun ik ondernemers en organisaties als sparringpartner, organisatieverbeteraar en hands-on professional."
-  verbindt_slogan: "Meedenken. Verbeteren. Realiseren."
+    - Mijn achtergrond ligt in de detailhandel, e-commerce en gezondheidsbranche, waarin ik inmiddels twintig jaar ervaring heb. Daarnaast beschik ik over een juridische opleiding en een brede praktische IT-achtergrond.
+    - Ik combineer zakelijke, organisatorische en juridische inzichten met technologie om problemen te doorgronden, bedrijfsprocessen te verbeteren en nieuwe toepassingen te ontwikkelen.
+    - Ik ben geen traditionele programmeur. Mijn kracht ligt in het herkennen van mogelijkheden, het verbinden van verschillende disciplines en het daadwerkelijk realiseren van praktische oplossingen.
+    - Met Domein Stam ondersteun ik ondernemers en organisaties als sparringpartner, organisatieverbeteraar en hands-on professional.
+  verbindt_slogan: Meedenken. Verbeteren. Realiseren.
   disciplines:
-    - titel: "Gezondheid"
-      tekst: "Twintig jaar in de branche, gecertificeerd drogist."
-    - titel: "Ondernemerschap"
-      tekst: "Commercie, inkoop, verkoop en leveranciers, met oog voor haalbaarheid."
-    - titel: "Organisatieverbetering"
-      tekst: "Organisatieontwikkeling en efficiëntere bedrijfsprocessen."
-    - titel: "Juridische blik"
-      tekst: "Oog voor regelgeving, verantwoordelijkheden, afspraken en risico's."
-    - titel: "IT & AI"
-      tekst: "Een brede praktische IT-achtergrond; AI gericht ingezet."
-    - titel: "Hands-on"
-      tekst: "Van eerste idee tot werkende toepassing."
-
+    - titel: Gezondheid
+      tekst: Twintig jaar in de branche, gecertificeerd drogist.
+    - titel: Ondernemerschap
+      tekst: Commercie, inkoop, verkoop en leveranciers, met oog voor haalbaarheid.
+    - titel: Organisatieverbetering
+      tekst: Organisatieontwikkeling en efficiëntere bedrijfsprocessen.
+    - titel: Juridische blik
+      tekst: Oog voor regelgeving, verantwoordelijkheden, afspraken en risico's.
+    - titel: IT & AI
+      tekst: Een brede praktische IT-achtergrond; AI gericht ingezet.
+    - titel: Hands-on
+      tekst: Van eerste idee tot werkende toepassing.
 projecten:
-  titel: "Ondernemingen, merken en projecten"
-  ondertitel: "Voorbeelden van wat ik heb opgebouwd, ontwikkeld en gemaakt."
-  kop_merken: "Ondernemingen & merken"
-  kop_apps: "Digitale toepassingen"
-
+  titel: Ondernemingen, merken en projecten
+  ondertitel: Voorbeelden van wat ik heb opgebouwd, ontwikkeld en gemaakt.
+  kop_merken: Ondernemingen & merken
+  kop_apps: Digitale toepassingen
 adviesdrogisterij:
-  labels: "E-commerce · Ondernemerschap · Gezondheid · 2014–2026"
-  naam: "Adviesdrogisterij.nl"
-  kern: "Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf."
-  tekst: "Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik van 2014 tot 2026 heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering."
+  labels: E-commerce · Ondernemerschap · Gezondheid · 2014–2026
+  naam: Adviesdrogisterij.nl
+  kern: Ervaring met het ontwikkelen en exploiteren van een online handelsbedrijf.
+  tekst: 'Een e-commerceonderneming in gezondheidsproducten en zelfzorgmiddelen die ik van 2014 tot 2026 heb geleid en ontwikkeld: van commerciële strategie en bedrijfsvoering tot organisatieverbetering, logistiek en digitalisering.'
   onderwerpen:
-    - "Commercie & online marketing"
-    - "E-commerce"
-    - "Inkoop & leveranciers"
-    - "Logistiek & voorraad"
-    - "Personeel"
-    - "Organisatie­ontwikkeling"
-    - "Procesverbetering"
-    - "Financiën"
-    - "IT & automatisering"
-  status_label: "Overgedragen"
-  status: "In november 2026 overgedragen aan een nieuwe eigenaar. Het is geen onderdeel meer van Domein Stam."
-  link_tekst: "adviesdrogisterij.nl"
-  link_url: "https://www.adviesdrogisterij.nl/"
-
+    - Commercie & online marketing
+    - E-commerce
+    - Inkoop & leveranciers
+    - Logistiek & voorraad
+    - Personeel
+    - Organisatie­ontwikkeling
+    - Procesverbetering
+    - Financiën
+    - IT & automatisering
+  status_label: Overgedragen
+  status: In november 2026 overgedragen aan een nieuwe eigenaar. Het is geen onderdeel meer van Domein Stam.
+  link_tekst: adviesdrogisterij.nl
+  link_url: https://www.adviesdrogisterij.nl/
 phytoforsan:
-  labels: "Merkontwikkeling · Gezondheid · Productontwikkeling · tot 2026"
-  naam: "PhytoForsan"
-  kern: "Ervaring met het ontwikkelen en positioneren van eigen gezondheidsproducten."
-  tekst: "Een merk binnen de gezondheidsbranche dat ik heb ontwikkeld, met ervaring in productontwikkeling, positionering en commerciële exploitatie. Het laat mijn belangstelling zien voor het ontwikkelen van producten en merken, van het eerste concept tot de praktische uitvoering."
+  labels: Merkontwikkeling · Gezondheid · Productontwikkeling · tot 2026
+  naam: PhytoForsan
+  kern: Ervaring met het ontwikkelen en positioneren van eigen gezondheidsproducten.
+  tekst: Een merk binnen de gezondheidsbranche dat ik heb ontwikkeld, met ervaring in productontwikkeling, positionering en commerciële exploitatie. Het laat mijn belangstelling zien voor het ontwikkelen van producten en merken, van het eerste concept tot de praktische uitvoering.
   onderwerpen:
-    - "Productontwikkeling"
-    - "Merkpositionering"
-    - "Supplementen"
-    - "Wellness"
-    - "Commerciële exploitatie"
-  status_label: "Overgedragen"
-  status: "In 2026 samen met Adviesdrogisterij.nl overgedragen. Het merk is mijn initiatief, maar geen onderdeel meer van Domein Stam."
-  link_tekst: "phytoforsan.nl"
-  link_url: "https://www.phytoforsan.nl/"
-
+    - Productontwikkeling
+    - Merkpositionering
+    - Supplementen
+    - Wellness
+    - Commerciële exploitatie
+  status_label: Overgedragen
+  status: In 2026 samen met Adviesdrogisterij.nl overgedragen. Het merk is mijn initiatief, maar geen onderdeel meer van Domein Stam.
+  link_tekst: phytoforsan.nl
+  link_url: https://www.phytoforsan.nl/
 healthofnature:
-  labels: "Gezondheid · Import & distributie · Merkontwikkeling"
-  naam: "Health of Nature"
-  kern: "Ervaring met handel, distributie en commerciële ontwikkeling van natuurlijke gezondheidsproducten."
-  tekst: "Vanuit Domein Stam houd ik mij bezig met Health of Nature, een merk binnen de markt voor natuurlijke gezondheidsproducten. Met onder andere Natural Green Chlorella en Spirulina richt het merk zich op de distributie en commerciële ontwikkeling van voedingssupplementen."
-  extra: "Hier komen twintig jaar branche-ervaring samen met inkoop, leveranciersrelaties, groothandel, merkpositionering en commerciële bedrijfsvoering."
-  link_tekst: "healthofnature.nl"
-  link_url: "https://www.healthofnature.nl/"
-
+  labels: Gezondheid · Import & distributie · Merkontwikkeling
+  naam: Health of Nature
+  kern: Ervaring met handel, distributie en commerciële ontwikkeling van natuurlijke gezondheidsproducten.
+  tekst: Vanuit Domein Stam houd ik mij bezig met Health of Nature, een merk binnen de markt voor natuurlijke gezondheidsproducten. Met onder andere Natural Green Chlorella en Spirulina richt het merk zich op de distributie en commerciële ontwikkeling van voedingssupplementen.
+  extra: Hier komen twintig jaar branche-ervaring samen met inkoop, leveranciersrelaties, groothandel, merkpositionering en commerciële bedrijfsvoering.
+  link_tekst: healthofnature.nl
+  link_url: https://www.healthofnature.nl/
 atempo:
-  label: "Gezondheid & beweging"
-  status: "In ontwikkeling"
-  naam: "Atempo"
-  slogan: "Move. Recover. Grow."
-  tekst: "Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel."
-  knop: "Open Atempo"
-
+  label: Gezondheid & beweging
+  status: In ontwikkeling
+  naam: Atempo
+  slogan: Move. Recover. Grow.
+  tekst: Een persoonlijke trainingsapp voor hardlopen, kracht, mobiliteit en herstel.
+  knop: Open Atempo
 restavia:
-  label: "Ontspanning"
-  status: "In ontwikkeling"
-  naam: "Restavia"
-  slogan: "Breathe. Feel. Flow."
-  tekst: "Een digitale toepassing gericht op ademhaling, humming en ontspanning."
-  knop: "Open Restavia"
-
+  label: Ontspanning
+  status: In ontwikkeling
+  naam: Restavia
+  slogan: Breathe. Feel. Flow.
+  tekst: Een digitale toepassing gericht op ademhaling, humming en ontspanning.
+  knop: Open Restavia
 antwoorden:
-  status: "Zakelijk praktijkvoorbeeld"
-  naam: "Antwoorden Adviesdrogisterij.nl"
-  slogan: "Gezondheid · Ondernemerschap · AI · Digitale innovatie"
+  status: Zakelijk praktijkvoorbeeld
+  naam: Antwoorden Adviesdrogisterij.nl
+  slogan: Gezondheid · Ondernemerschap · AI · Digitale innovatie
   alineas:
-    - "Een digitale toepassing ter ondersteuning van de klantcommunicatie binnen Adviesdrogisterij.nl. Ontwikkeld vanuit jarenlange praktijkervaring in de drogisterij- en gezondheidsbranche, gecombineerd met kennis van bedrijfsvoering, klantcommunicatie en digitale technologie."
-    - "Het project laat zien hoe ik branchekennis, zakelijke inzichten en zorgvuldigheid combineer bij het ontwikkelen van praktische AI-oplossingen."
-  slot: "Bestaande toepassing · alleen toegankelijk via inlogscherm"
-  knop: "Naar het inlogscherm"
-  kleine_lettertjes: "Een hulpmiddel voor medewerkers; het geeft zelf geen medisch of juridisch advies. Ontwikkeld voor gebruik binnen Adviesdrogisterij.nl."
+    - Een digitale toepassing ter ondersteuning van de klantcommunicatie binnen Adviesdrogisterij.nl. Ontwikkeld vanuit jarenlange praktijkervaring in de drogisterij- en gezondheidsbranche, gecombineerd met kennis van bedrijfsvoering, klantcommunicatie en digitale technologie.
+    - Het project laat zien hoe ik branchekennis, zakelijke inzichten en zorgvuldigheid combineer bij het ontwikkelen van praktische AI-oplossingen.
+  slot: Bestaande toepassing · alleen toegankelijk via inlogscherm
+  knop: Naar het inlogscherm
+  kleine_lettertjes: Een hulpmiddel voor medewerkers; het geeft zelf geen medisch of juridisch advies. Ontwikkeld voor gebruik binnen Adviesdrogisterij.nl.
   stappen:
-    - titel: "Klantvraag"
-      tekst: "De mail van de klant gaat de app in."
-    - titel: "Conceptantwoord"
-      tekst: "AI stelt een concept op met de eigen instructies en kennisbank."
-    - titel: "Controle"
-      tekst: "Het concept wordt nagelopen op de huisregels."
-    - titel: "Medewerker"
-      tekst: "Past het antwoord waar nodig aan en neemt het over."
-
+    - titel: Klantvraag
+      tekst: De mail van de klant gaat de app in.
+    - titel: Conceptantwoord
+      tekst: AI stelt een concept op met de eigen instructies en kennisbank.
+    - titel: Controle
+      tekst: Het concept wordt nagelopen op de huisregels.
+    - titel: Medewerker
+      tekst: Past het antwoord waar nodig aan en neemt het over.
 onlysun:
-  label: "Zonne-energie"
-  status: "Eigen gebruik"
-  naam: "Only Sun"
-  slogan: "Laden op de zon."
+  label: Zonne-energie
+  status: Eigen gebruik
+  naam: Only Sun
+  slogan: Laden op de zon.
   alineas:
-    - "Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger."
-    - "Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster."
-  slot: "Draait lokaal · niet openbaar"
+    - 'Mijn auto laadt zoveel mogelijk met stroom afkomstig van de zonnepanelen. Only Sun kijkt hoeveel zonne-energie er over is en laat de laadpaal precies dat gebruiken: schijnt de zon volop, dan laadt hij sneller; schuift er een wolk voor, dan laadt hij rustiger.'
+    - 'Een natuurlijke aanpak: meebewegen met de zon, in plaats van er tegenin. Het draait lokaal op een eigen server, met een eenvoudig dashboard als kijkvenster.'
+  slot: Draait lokaal · niet openbaar
   stappen:
-    - titel: "Zon meten"
-      tekst: "Wat de panelen opwekken en het huis verbruikt."
-    - titel: "Overschot berekenen"
-      tekst: "Hoeveel zonnestroom er over is voor de auto."
-    - titel: "Meebewegen"
-      tekst: "De laadpaal laadt mee met de zon."
-    - titel: "Nacht"
-      tekst: "Wat de zon niet haalt, volgt 's nachts volgens plan."
-
+    - titel: Zon meten
+      tekst: Wat de panelen opwekken en het huis verbruikt.
+    - titel: Overschot berekenen
+      tekst: Hoeveel zonnestroom er over is voor de auto.
+    - titel: Meebewegen
+      tekst: De laadpaal laadt mee met de zon.
+    - titel: Nacht
+      tekst: Wat de zon niet haalt, volgt 's nachts volgens plan.
 contact:
-  titel: "Kennismaken?"
-  titel_accent: "Een opdracht of samenwerking?"
-  tekst: "Stuur gerust een bericht of een mail. Ik maak graag kennis en denk vrijblijvend mee."
-  knop_whatsapp: "Stuur een WhatsApp"
-  knop_email: "Stuur een e-mail"
-  email_onderwerp: "Kennismaking"
-  telefoon_label: "Telefoon en WhatsApp"
-  telefoon: "06-23906070"
-  telefoon_internationaal: "31623906070"
-  email: "rens@domeinstam.nl"
-
+  titel: Kennismaken?
+  titel_accent: Een opdracht of samenwerking?
+  tekst: Stuur gerust een bericht of een mail. Ik maak graag kennis en denk vrijblijvend mee.
+  knop_whatsapp: Stuur een WhatsApp
+  knop_email: Stuur een e-mail
+  email_onderwerp: Kennismaking
+  telefoon_label: Telefoon en WhatsApp
+  telefoon: 06-23906070
+  telefoon_internationaal: '31623906070'
+  email: rens@domeinstam.nl
 voettekst:
-  naam: "© 2026 Rens Stam · Domein Stam"
-  kvk: "92370802"
-  btw: "NL004949180B47"
-  slogan: "Meedenken. Verbeteren. Realiseren."
+  naam: © 2026 Rens Stam · Domein Stam
+  kvk: '92370802'
+  btw: NL004949180B47
+  slogan: Meedenken. Verbeteren. Realiseren.

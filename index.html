@@ -212,10 +212,12 @@ a{color:inherit}
 .b-lead{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--forest)}
 .b-body p:not(.b-lead):not(.v-tags){font-size:.93rem}
 .v-quiet{color:var(--muted)}
-.v-status{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem!important;color:var(--muted);background:var(--paper);border-radius:12px;padding:.65rem .8rem;margin-top:1rem!important}
+.v-status{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem!important;color:var(--muted);background:var(--paper);border-radius:12px;padding:.65rem .8rem;margin-top:auto!important;box-sizing:border-box}
+.brand-card .b-chips{margin-bottom:1rem}
 .v-badge{flex:none;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#F3D9A6;color:#4A3205;border-radius:999px;padding:.28rem .5rem;margin-top:.05rem}
 .v-link{align-self:flex-start;margin-top:auto;padding-top:1rem;font-weight:600;font-size:.9rem;color:var(--forest)}
 .v-link.ul{background-position:0 100%}
+.v-status + .v-link{margin-top:0}
 
 /* echte beelden + klein logo boven de naam */
 .shot-site{background:#EEE9DF}
@@ -632,6 +634,8 @@ footer p{margin:0}
 <script>
 (function(){
   var d=document.documentElement; d.classList.add('js');
+  function gelijk(){var s=document.querySelectorAll('.brands .v-status');s.forEach(function(e){e.style.minHeight='';});if(!matchMedia('(min-width:60rem)').matches)return;var m=0;s.forEach(function(e){m=Math.max(m,e.offsetHeight);});s.forEach(function(e){e.style.minHeight=m+'px';});}
+  window.addEventListener('load',gelijk);window.addEventListener('resize',gelijk);if(document.fonts)document.fonts.ready.then(gelijk);
   document.querySelectorAll('.more-btn').forEach(function(b){b.addEventListener('click',function(){var f=b.closest('.foldable');var o=f.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Minder tonen':'Lees verder';});});
   var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var els=document.querySelectorAll('.reveal');

@@ -4,7 +4,7 @@
 {% assign t = site.data.teksten %}{% assign lb = t.loondienst %}{% comment %}
   Professionele status: alleen als het vinkje "Open voor nieuwe mogelijkheden" in /admin UIT staat,
   gebruikt de pagina de teksten voor "In loondienst". Lege velden vallen terug op de gewone teksten.
-{% endcomment %}{% assign in_loondienst = false %}{% if t.status.open_voor_mogelijkheden == false %}{% assign in_loondienst = true %}{% endif %}{% if in_loondienst %}{% assign s_deel = lb.deel_beschrijving | default: t.pagina.deel_beschrijving %}{% assign s_knop_helpen = lb.knop_helpen | default: t.intro.knop_helpen %}{% assign s_helpen_titel = lb.helpen_titel | default: t.helpen.titel %}{% assign s_helpen_ondertitel = lb.helpen_ondertitel | default: t.helpen.ondertitel %}{% assign s_blokken = lb.helpen_blokken | default: t.helpen.blokken %}{% assign s_contact_accent = lb.contact_titel_accent | default: t.contact.titel_accent %}{% assign s_contact_tekst = lb.contact_tekst | default: t.contact.tekst %}{% else %}{% assign s_deel = t.pagina.deel_beschrijving %}{% assign s_knop_helpen = t.intro.knop_helpen %}{% assign s_helpen_titel = t.helpen.titel %}{% assign s_helpen_ondertitel = t.helpen.ondertitel %}{% assign s_blokken = t.helpen.blokken %}{% assign s_contact_accent = t.contact.titel_accent %}{% assign s_contact_tekst = t.contact.tekst %}{% endif %}<!doctype html>
+{% endcomment %}{% assign in_loondienst = false %}{% if t.status.open_voor_mogelijkheden == false %}{% assign in_loondienst = true %}{% endif %}{% if in_loondienst %}{% assign s_deel = lb.deel_beschrijving | default: t.pagina.deel_beschrijving %}{% assign s_knop_helpen = lb.knop_helpen | default: t.intro.knop_helpen %}{% assign s_knop_kennismaken = lb.knop_kennismaken | default: t.intro.knop_kennismaken %}{% assign s_helpen_titel = lb.helpen_titel | default: t.helpen.titel %}{% assign s_helpen_ondertitel = lb.helpen_ondertitel | default: t.helpen.ondertitel %}{% assign s_blokken = lb.helpen_blokken | default: t.helpen.blokken %}{% assign s_contact_accent = lb.contact_titel_accent | default: t.contact.titel_accent %}{% assign s_contact_tekst = lb.contact_tekst | default: t.contact.tekst %}{% else %}{% assign s_deel = t.pagina.deel_beschrijving %}{% assign s_knop_helpen = t.intro.knop_helpen %}{% assign s_knop_kennismaken = t.intro.knop_kennismaken %}{% assign s_helpen_titel = t.helpen.titel %}{% assign s_helpen_ondertitel = t.helpen.ondertitel %}{% assign s_blokken = t.helpen.blokken %}{% assign s_contact_accent = t.contact.titel_accent %}{% assign s_contact_tekst = t.contact.tekst %}{% endif %}<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
@@ -395,12 +395,12 @@ footer p{margin:0}
 
   <header class="hero">
     <div>
-      <p class="kicker">{{ t.intro.kicker | escape }}</p>
+      <p class="kicker">{% if in_loondienst and t.status.functie and t.status.functie != "" %}{{ t.status.functie | escape }}{% if t.status.werkgever and t.status.werkgever != "" %} · {% if t.status.werkgever_url and t.status.werkgever_url != "" %}<a class="ul" href="{{ t.status.werkgever_url | escape }}" rel="noopener">{{ t.status.werkgever | escape }}</a>{% else %}{{ t.status.werkgever | escape }}{% endif %}{% endif %}{% else %}{{ t.intro.kicker | escape }}{% endif %}</p>
       <h1><span class="l1">{{ t.intro.naam | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
       <p class="lead">{{ t.intro.tekst | escape }}</p>
-      {% if t.intro.beschikbaar and t.intro.beschikbaar != "" %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}{% if in_loondienst and t.status.functie and t.status.functie != "" %}<p class="avail">Nu werkzaam als {{ t.status.functie | escape }}{% if t.status.werkgever and t.status.werkgever != "" %} bij {% if t.status.werkgever_url and t.status.werkgever_url != "" %}<a class="ul" href="{{ t.status.werkgever_url | escape }}" rel="noopener">{{ t.status.werkgever | escape }}</a>{% else %}{{ t.status.werkgever | escape }}{% endif %}{% endif %}</p>{% endif %}
+      {% if t.intro.beschikbaar and t.intro.beschikbaar != "" %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}
       <div class="hero-ctas">
-        <a class="pill pill-solid" href="#contact">{{ t.intro.knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="pill pill-solid" href="#contact">{{ s_knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
         <a class="pill pill-line" href="#helpen">{{ s_knop_helpen | escape }}</a>
       </div>
     </div>

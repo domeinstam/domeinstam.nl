@@ -6,27 +6,28 @@ status:
 loondienst:
   deel_beschrijving: 'Een brede blik en een praktische aanpak: ondernemerschap, organisatie, IT en gezondheid.'
   knop_helpen: Expertise
+  knop_kennismaken: Contact
   helpen_titel: Expertise en werkwijze
   helpen_ondertitel: Van inzicht naar praktische verbetering.
   helpen_blokken:
     - titel: Organisatie en processen
-      tekst: Processen in kaart brengen, werk opnieuw inrichten en verbeteringen ook echt doorvoeren.
+      tekst: Ik breng processen in kaart, richt werk opnieuw in en zorg dat verbeteringen ook echt landen.
       link_naar_contact: ''
     - titel: Kritisch meedenken
-      tekst: Een onafhankelijke blik op ideeën, strategie en belangrijke beslissingen, met oog voor wat haalbaar is.
+      tekst: Ik kijk onafhankelijk naar ideeën, strategie en beslissingen, met oog voor wat haalbaar is.
       link_naar_contact: ''
     - titel: Structuur en uitvoering
-      tekst: Een project oppakken, structuur aanbrengen en meewerken tot het loopt.
+      tekst: Ik breng structuur aan in projecten en werk zelf mee tot het loopt.
       link_naar_contact: ''
     - titel: Slimmer werken
-      tekst: Onderzoeken wat software, automatisering en AI concreet opleveren, en het daarna ook inrichten.
+      tekst: Ik onderzoek wat software, automatisering en AI concreet opleveren en richt het daarna ook in.
       link_naar_contact: ''
     - titel: Commerciële ontwikkeling
-      tekst: 'E-commerce, verkoop, producten, merken en distributie: van strategie tot uitvoering.'
+      tekst: Ervaring met e-commerce, verkoop, producten, merken en distributie, van strategie tot uitvoering.
       link_naar_contact: ''
-    - titel: Benieuwd hoe ik werk?
-      tekst: Uitwisselen over een vraagstuk of gewoon kennismaken kan altijd.
-      link_naar_contact: Neem gerust contact op.
+    - titel: Even sparren?
+      tekst: Ervaringen uitwisselen over een vraagstuk kan altijd.
+      link_naar_contact: Stuur gerust een bericht.
   contact_titel_accent: Vraag, idee of gewoon contact.
   contact_tekst: Wil je sparren over een vraagstuk, ervaringen uitwisselen of gewoon kennismaken? Stuur gerust een bericht of e-mail, ik reageer graag.
 pagina:

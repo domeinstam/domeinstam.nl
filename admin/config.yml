@@ -41,6 +41,7 @@ collections:
             fields:
               - { label: "Omschrijving bij delen (LinkedIn, WhatsApp)", name: deel_beschrijving, widget: text, required: false }
               - { label: "Menu en knop (in plaats van 'Waarmee ik help')", name: knop_helpen, widget: string, required: false }
+              - { label: "Hoofdknop bovenaan (in plaats van 'Kennismaken')", name: knop_kennismaken, widget: string, required: false }
               - { label: "Kop van onderdeel 01", name: helpen_titel, widget: string, required: false }
               - { label: "Regel naast de kop van onderdeel 01", name: helpen_ondertitel, widget: string, required: false }
               - label: Blokken van onderdeel 01

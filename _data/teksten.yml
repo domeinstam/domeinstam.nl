@@ -1,3 +1,34 @@
+status:
+  open_voor_mogelijkheden: true
+  functie: ''
+  werkgever: ''
+  werkgever_url: ''
+loondienst:
+  deel_beschrijving: 'Een brede blik en een praktische aanpak: ondernemerschap, organisatie, IT en gezondheid.'
+  knop_helpen: Expertise
+  helpen_titel: Expertise en werkwijze
+  helpen_ondertitel: Van inzicht naar praktische verbetering.
+  helpen_blokken:
+    - titel: Organisatie en processen
+      tekst: Processen in kaart brengen, werk opnieuw inrichten en verbeteringen ook echt doorvoeren.
+      link_naar_contact: ''
+    - titel: Kritisch meedenken
+      tekst: Een onafhankelijke blik op ideeën, strategie en belangrijke beslissingen, met oog voor wat haalbaar is.
+      link_naar_contact: ''
+    - titel: Structuur en uitvoering
+      tekst: Een project oppakken, structuur aanbrengen en meewerken tot het loopt.
+      link_naar_contact: ''
+    - titel: Slimmer werken
+      tekst: Onderzoeken wat software, automatisering en AI concreet opleveren, en het daarna ook inrichten.
+      link_naar_contact: ''
+    - titel: Commerciële ontwikkeling
+      tekst: 'E-commerce, verkoop, producten, merken en distributie: van strategie tot uitvoering.'
+      link_naar_contact: ''
+    - titel: Benieuwd hoe ik werk?
+      tekst: Uitwisselen over een vraagstuk of gewoon kennismaken kan altijd.
+      link_naar_contact: Neem gerust contact op.
+  contact_titel_accent: Vraag, idee of gewoon contact.
+  contact_tekst: Wil je sparren over een vraagstuk, ervaringen uitwisselen of gewoon kennismaken? Stuur gerust een bericht of e-mail, ik reageer graag.
 pagina:
   titel: Rens Stam · Ondernemend, analytisch, praktisch
   beschrijving: 'Rens Stam: ondernemend, analytisch en praktisch. Ervaring in organisatieverbetering, bedrijfsvoering, commercie, IT, AI en de gezondheidsbranche.'

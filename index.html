@@ -1,7 +1,10 @@
 ---
 # Teksten staan in _data/teksten.yml en zijn te bewerken via /admin
 ---
-{% assign t = site.data.teksten %}<!doctype html>
+{% assign t = site.data.teksten %}{% assign lb = t.loondienst %}{% comment %}
+  Professionele status: alleen als het vinkje "Open voor nieuwe mogelijkheden" in /admin UIT staat,
+  gebruikt de pagina de teksten voor "In loondienst". Lege velden vallen terug op de gewone teksten.
+{% endcomment %}{% assign in_loondienst = false %}{% if t.status.open_voor_mogelijkheden == false %}{% assign in_loondienst = true %}{% endif %}{% if in_loondienst %}{% assign s_deel = lb.deel_beschrijving | default: t.pagina.deel_beschrijving %}{% assign s_knop_helpen = lb.knop_helpen | default: t.intro.knop_helpen %}{% assign s_helpen_titel = lb.helpen_titel | default: t.helpen.titel %}{% assign s_helpen_ondertitel = lb.helpen_ondertitel | default: t.helpen.ondertitel %}{% assign s_blokken = lb.helpen_blokken | default: t.helpen.blokken %}{% assign s_contact_accent = lb.contact_titel_accent | default: t.contact.titel_accent %}{% assign s_contact_tekst = lb.contact_tekst | default: t.contact.tekst %}{% else %}{% assign s_deel = t.pagina.deel_beschrijving %}{% assign s_knop_helpen = t.intro.knop_helpen %}{% assign s_helpen_titel = t.helpen.titel %}{% assign s_helpen_ondertitel = t.helpen.ondertitel %}{% assign s_blokken = t.helpen.blokken %}{% assign s_contact_accent = t.contact.titel_accent %}{% assign s_contact_tekst = t.contact.tekst %}{% endif %}<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8">
@@ -12,7 +15,7 @@
 <link rel="canonical" href="https://domeinstam.nl/">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Person","@id":"https://domeinstam.nl/#rens","name":{{ t.intro.naam | jsonify }},"url":"https://domeinstam.nl/","description":{{ t.pagina.beschrijving | jsonify }},"knowsLanguage":"nl","worksFor":{"@id":"https://domeinstam.nl/#domeinstam"}{% if t.contact.linkedin and t.contact.linkedin != "" %},"sameAs":[{{ t.contact.linkedin | jsonify }}]{% endif %}},
+ {"@type":"Person","@id":"https://domeinstam.nl/#rens","name":{{ t.intro.naam | jsonify }},"url":"https://domeinstam.nl/","description":{{ t.pagina.beschrijving | jsonify }},"knowsLanguage":"nl",{% if in_loondienst and t.status.functie and t.status.functie != "" %}"jobTitle":{{ t.status.functie | jsonify }},{% endif %}{% if in_loondienst and t.status.werkgever and t.status.werkgever != "" %}"worksFor":{"@type":"Organization","name":{{ t.status.werkgever | jsonify }}{% if t.status.werkgever_url and t.status.werkgever_url != "" %},"url":{{ t.status.werkgever_url | jsonify }}{% endif %}}{% else %}"worksFor":{"@id":"https://domeinstam.nl/#domeinstam"}{% endif %}{% if t.contact.linkedin and t.contact.linkedin != "" %},"sameAs":[{{ t.contact.linkedin | jsonify }}]{% endif %}},
  {"@type":"Organization","@id":"https://domeinstam.nl/#domeinstam","name":"Domein Stam","url":"https://domeinstam.nl/","logo":"https://domeinstam.nl/img/logo/logo-vierkant.png","founder":{"@id":"https://domeinstam.nl/#rens"}},
  {"@type":"WebSite","@id":"https://domeinstam.nl/#site","url":"https://domeinstam.nl/","name":"Rens Stam","inLanguage":"nl","publisher":{"@id":"https://domeinstam.nl/#domeinstam"}}
 ]}
@@ -21,7 +24,7 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Domein Stam">
 <meta property="og:title" content="{{ t.pagina.deel_titel | escape }}">
-<meta property="og:description" content="{{ t.pagina.deel_beschrijving | escape }}">
+<meta property="og:description" content="{{ s_deel | escape }}">
 <meta property="og:url" content="https://domeinstam.nl/">
 <meta property="og:image" content="https://domeinstam.nl/img/logo/deelafbeelding.png">
 <meta property="og:image:width" content="1200">
@@ -383,7 +386,7 @@ footer p{margin:0}
   <div class="top">
     <a class="brand-logo" href="./" aria-label="Domein Stam, naar het begin"><img src="img/logo/boom-logo.svg" width="284" height="352" alt=""><span class="brand-name">Domein Stam</span></a>
     <nav class="nav" aria-label="Hoofdmenu">
-      <a class="ul" href="#helpen">Waarmee ik help</a>
+      <a class="ul" href="#helpen">{{ s_knop_helpen | escape }}</a>
       <a class="ul opt" href="#verhaal">Verhaal</a>
       <a class="ul opt" href="#projecten">Projecten</a>
       <a class="ul" href="#contact">Contact</a>
@@ -395,10 +398,10 @@ footer p{margin:0}
       <p class="kicker">{{ t.intro.kicker | escape }}</p>
       <h1><span class="l1">{{ t.intro.naam | escape }}</span> <span class="l2">{{ t.intro.ondertitel | escape }}</span></h1>
       <p class="lead">{{ t.intro.tekst | escape }}</p>
-      {% if t.intro.beschikbaar and t.intro.beschikbaar != "" %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}
+      {% if t.intro.beschikbaar and t.intro.beschikbaar != "" %}<p class="avail">{{ t.intro.beschikbaar | escape }}</p>{% endif %}{% if in_loondienst and t.status.functie and t.status.functie != "" %}<p class="avail">Nu werkzaam als {{ t.status.functie | escape }}{% if t.status.werkgever and t.status.werkgever != "" %} bij {% if t.status.werkgever_url and t.status.werkgever_url != "" %}<a class="ul" href="{{ t.status.werkgever_url | escape }}" rel="noopener">{{ t.status.werkgever | escape }}</a>{% else %}{{ t.status.werkgever | escape }}{% endif %}{% endif %}</p>{% endif %}
       <div class="hero-ctas">
         <a class="pill pill-solid" href="#contact">{{ t.intro.knop_kennismaken | escape }} <span class="arr" aria-hidden="true">→</span></a>
-        <a class="pill pill-line" href="#helpen">{{ t.intro.knop_helpen | escape }}</a>
+        <a class="pill pill-line" href="#helpen">{{ s_knop_helpen | escape }}</a>
       </div>
     </div>
 
@@ -428,11 +431,11 @@ footer p{margin:0}
   <section class="sec" id="helpen" aria-labelledby="h-helpen">
     <div class="wrap">
       <div class="sec-head reveal">
-        <div><span class="num">01</span><h2 id="h-helpen">{{ t.helpen.titel | escape }}</h2></div>
-        <p>{{ t.helpen.ondertitel | escape }}</p>
+        <div><span class="num">01</span><h2 id="h-helpen">{{ s_helpen_titel | escape }}</h2></div>
+        <p>{{ s_helpen_ondertitel | escape }}</p>
       </div>
       <ul class="help">
-{% for b in t.helpen.blokken %}        <li class="reveal"><h3>{{ b.titel | escape }}</h3><p>{{ b.tekst | escape }}{% if b.link_naar_contact %} <a class="ul" href="#contact">{{ b.link_naar_contact | escape }}</a>{% endif %}</p></li>
+{% for b in s_blokken %}        <li class="reveal"><h3>{{ b.titel | escape }}</h3><p>{{ b.tekst | escape }}{% if b.link_naar_contact %} <a class="ul" href="#contact">{{ b.link_naar_contact | escape }}</a>{% endif %}</p></li>
 {% endfor %}      </ul>
     </div>
   </section>
@@ -597,8 +600,8 @@ footer p{margin:0}
     <div class="wrap contact-grid reveal">
       <div>
         <span class="num">04</span>
-        <h2 id="h-contact">{{ t.contact.titel | escape }}{% if t.contact.titel_accent and t.contact.titel_accent != "" %} <em>{{ t.contact.titel_accent | escape }}</em>{% endif %}</h2>
-        <p>{{ t.contact.tekst | escape }}</p>
+        <h2 id="h-contact">{{ t.contact.titel | escape }}{% if s_contact_accent and s_contact_accent != "" %} <em>{{ s_contact_accent | escape }}</em>{% endif %}</h2>
+        <p>{{ s_contact_tekst | escape }}</p>
         <div class="contact-btns">
           <a class="wa" href="https://wa.me/{{ t.contact.telefoon_internationaal | escape }}" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>

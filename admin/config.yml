@@ -22,6 +22,40 @@ collections:
         label: Teksten van domeinstam.nl
         file: _data/teksten.yml
         fields:
+          - label: "★ Professionele status"
+            name: status
+            widget: object
+            collapsed: false
+            hint: "Vinkje AAN = Open voor mogelijkheden (functie, projecten, samenwerkingen). Vinkje UIT = In loondienst: de site gebruikt dan de teksten uit 'Teksten bij status In loondienst'. Opslaan en na ongeveer een minuut is het live."
+            fields:
+              - { label: Open voor nieuwe mogelijkheden, name: open_voor_mogelijkheden, widget: boolean, default: true }
+              - { label: "Huidige functie (alleen getoond als het vinkje UIT staat, mag leeg)", name: functie, widget: string, required: false }
+              - { label: "Werkgever (mag leeg)", name: werkgever, widget: string, required: false }
+              - { label: "Website van de werkgever (mag leeg)", name: werkgever_url, widget: string, required: false, pattern: ['^$|^https://', 'Begint met https://'] }
+
+          - label: "Teksten bij status In loondienst"
+            name: loondienst
+            widget: object
+            collapsed: true
+            hint: "Deze teksten verschijnen alleen als 'Open voor nieuwe mogelijkheden' UIT staat. Laat je een veld leeg, dan wordt de gewone tekst gebruikt."
+            fields:
+              - { label: "Omschrijving bij delen (LinkedIn, WhatsApp)", name: deel_beschrijving, widget: text, required: false }
+              - { label: "Menu en knop (in plaats van 'Waarmee ik help')", name: knop_helpen, widget: string, required: false }
+              - { label: "Kop van onderdeel 01", name: helpen_titel, widget: string, required: false }
+              - { label: "Regel naast de kop van onderdeel 01", name: helpen_ondertitel, widget: string, required: false }
+              - label: Blokken van onderdeel 01
+                name: helpen_blokken
+                widget: list
+                required: false
+                label_singular: blok
+                summary: "{{fields.titel}}"
+                fields:
+                  - { label: Titel, name: titel, widget: string }
+                  - { label: Tekst, name: tekst, widget: text }
+                  - { label: Linktekst naar contact (mag leeg), name: link_naar_contact, widget: string, required: false }
+              - { label: "Contact: kop (tweede deel, schuin)", name: contact_titel_accent, widget: string, required: false }
+              - { label: "Contact: tekst", name: contact_tekst, widget: text, required: false }
+
           - label: Pagina (titel in het tabblad en bij delen)
             name: pagina
             widget: object

@@ -26,10 +26,10 @@ collections:
             name: status
             widget: object
             collapsed: false
-            hint: "Vinkje AAN = Open voor mogelijkheden (functie, projecten, samenwerkingen). Vinkje UIT = In loondienst: de site gebruikt dan de teksten uit 'Teksten bij status In loondienst'. Opslaan en na ongeveer een minuut is het live."
+            hint: "Schuifknop AAN = Open voor mogelijkheden (functie, projecten, samenwerkingen). Schuifknop UIT = In loondienst: de site gebruikt dan de teksten uit 'Teksten bij status In loondienst'. Opslaan en na ongeveer een minuut is het live."
             fields:
               - { label: Open voor nieuwe mogelijkheden, name: open_voor_mogelijkheden, widget: boolean, default: true }
-              - { label: "Huidige functie (alleen getoond als het vinkje UIT staat, mag leeg)", name: functie, widget: string, required: false }
+              - { label: "Huidige functie (alleen getoond als de schuifknop UIT staat, mag leeg)", name: functie, widget: string, required: false }
               - { label: "Werkgever (mag leeg)", name: werkgever, widget: string, required: false }
               - { label: "Website van de werkgever (mag leeg)", name: werkgever_url, widget: string, required: false, pattern: ['^$|^https://', 'Begint met https://'] }
 

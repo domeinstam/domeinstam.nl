@@ -2,7 +2,7 @@
 # Teksten staan in _data/teksten.yml en zijn te bewerken via /admin
 ---
 {% assign t = site.data.teksten %}{% assign lb = t.loondienst %}{% comment %}
-  Professionele status: alleen als het vinkje "Open voor nieuwe mogelijkheden" in /admin UIT staat,
+  Professionele status: alleen als de schuifknop "Open voor nieuwe mogelijkheden" in /admin UIT staat,
   gebruikt de pagina de teksten voor "In loondienst". Lege velden vallen terug op de gewone teksten.
 {% endcomment %}{% assign in_loondienst = false %}{% if t.status.open_voor_mogelijkheden == false %}{% assign in_loondienst = true %}{% endif %}{% if in_loondienst %}{% assign s_deel = lb.deel_beschrijving | default: t.pagina.deel_beschrijving %}{% assign s_knop_helpen = lb.knop_helpen | default: t.intro.knop_helpen %}{% assign s_knop_kennismaken = lb.knop_kennismaken | default: t.intro.knop_kennismaken %}{% assign s_helpen_titel = lb.helpen_titel | default: t.helpen.titel %}{% assign s_helpen_ondertitel = lb.helpen_ondertitel | default: t.helpen.ondertitel %}{% assign s_blokken = lb.helpen_blokken | default: t.helpen.blokken %}{% assign s_contact_accent = lb.contact_titel_accent | default: t.contact.titel_accent %}{% assign s_contact_tekst = lb.contact_tekst | default: t.contact.tekst %}{% else %}{% assign s_deel = t.pagina.deel_beschrijving %}{% assign s_knop_helpen = t.intro.knop_helpen %}{% assign s_knop_kennismaken = t.intro.knop_kennismaken %}{% assign s_helpen_titel = t.helpen.titel %}{% assign s_helpen_ondertitel = t.helpen.ondertitel %}{% assign s_blokken = t.helpen.blokken %}{% assign s_contact_accent = t.contact.titel_accent %}{% assign s_contact_tekst = t.contact.tekst %}{% endif %}<!doctype html>
 <html lang="nl">

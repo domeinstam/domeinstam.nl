@@ -1,12 +1,11 @@
 status:
-  open_voor_mogelijkheden: false
+  open_voor_mogelijkheden: true
   functie: E-commerce en Content Specialist
-  werkgever: Adviesdrogisterij.nl
+  werkgever: ''
   werkgever_url: ''
 loondienst:
   deel_beschrijving: 'Een brede blik en een praktische aanpak: ondernemerschap, organisatie, IT en gezondheid.'
   knop_helpen: Expertise
-  knop_kennismaken: Contact
   helpen_titel: Expertise en werkwijze
   helpen_ondertitel: Van inzicht naar praktische verbetering.
   helpen_blokken:
@@ -30,6 +29,7 @@ loondienst:
       link_naar_contact: Stuur gerust een bericht.
   contact_titel_accent: Vraag, idee of gewoon contact.
   contact_tekst: Wil je sparren over een vraagstuk, ervaringen uitwisselen of gewoon kennismaken? Stuur gerust een bericht of e-mail, ik reageer graag.
+  knop_kennismaken: Contact
 pagina:
   titel: Rens Stam · Ondernemend, analytisch, praktisch
   beschrijving: 'Rens Stam: ondernemend, analytisch en praktisch. Ervaring in organisatieverbetering, bedrijfsvoering, commercie, IT, AI en de gezondheidsbranche.'

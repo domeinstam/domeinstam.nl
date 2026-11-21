@@ -6,6 +6,7 @@ status:
 loondienst:
   deel_beschrijving: 'Een brede blik en een praktische aanpak: ondernemerschap, organisatie, IT en gezondheid.'
   knop_helpen: Expertise
+  knop_kennismaken: Contact
   helpen_titel: Expertise en werkwijze
   helpen_ondertitel: Van inzicht naar praktische verbetering.
   helpen_blokken:
@@ -29,7 +30,6 @@ loondienst:
       link_naar_contact: Stuur gerust een bericht.
   contact_titel_accent: Vraag, idee of gewoon contact.
   contact_tekst: Wil je sparren over een vraagstuk, ervaringen uitwisselen of gewoon kennismaken? Stuur gerust een bericht of e-mail, ik reageer graag.
-  knop_kennismaken: Contact
 pagina:
   titel: Rens Stam · Ondernemend, analytisch, praktisch
   beschrijving: 'Rens Stam: ondernemend, analytisch en praktisch. Ervaring in organisatieverbetering, bedrijfsvoering, commercie, IT, AI en de gezondheidsbranche.'
@@ -73,11 +73,11 @@ verhaal:
     - titel: De winkel
       tekst: 'Als gecertificeerd drogist met een eigen fysieke drogisterij legde ik de basis: kennis van de gezondheidsbranche en ondernemen in de praktijk.'
     - titel: De webshop
-      tekst: 'Met Adviesdrogisterij.nl ging ik in 2014 online, tot ik de webshop in 2026 overdroeg. Ik was betrokken bij vrijwel alles, van commercie en inkoop tot logistiek, personeel en financiën. Gaandeweg verschoof mijn rol van uitvoeren naar organiseren en verbeteren: processen inrichten, structuur aanbrengen en de bedrijfsvoering beter laten lopen.'
+      tekst: 'Met Adviesdrogisterij.nl ging ik in 2013 online, tot ik de webshop in 2026 overdroeg. Ik was betrokken bij vrijwel alles, van commercie en inkoop tot logistiek, personeel en financiën. Gaandeweg verschoof mijn rol van uitvoeren naar organiseren en verbeteren: processen inrichten, structuur aanbrengen en de bedrijfsvoering beter laten lopen.'
     - titel: De merken
       tekst: Met PhytoForsan en Health of Nature kwamen product- en merkontwikkeling, positionering, handel en distributie erbij.
     - titel: Digitale innovatie
-      tekst: 'Een brede, praktische IT-achtergrond bracht me bij automatisering en AI. Nu bouw ik toepassingen: voor het bedrijf, zoals Antwoorden Adviesdrogisterij.nl, en vanuit eigen interesse, zoals Atempo, Restavia en Only Sun.'
+      tekst: 'Een brede, praktische IT-achtergrond bracht me bij automatisering en AI. Nu bouw ik toepassingen: voor het bedrijf, zoals Antwoorden Adviesdrogisterij.nl, en vanuit eigen interesse, zoals Atempo en Restavia.'
   verbindt_titel: Wat alles verbindt
   verbindt_alineas:
     - 'Mijn achtergrond is breed: ondernemen in detailhandel en e-commerce, een juridische opleiding en een praktische IT-achtergrond. Wat die kanten verbindt, is nieuwsgierigheid.'

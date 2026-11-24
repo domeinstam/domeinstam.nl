@@ -218,6 +218,7 @@ collections:
               - { label: Slogan, name: slogan, widget: string }
               - { label: Tekst, name: tekst, widget: text }
               - { label: Knoptekst, name: knop, widget: string }
+              - { label: Knoptekst 'Ontdek' (naar de eigen pagina), name: meer, widget: string, required: false }
 
           - label: App – Restavia
             name: restavia
@@ -230,6 +231,7 @@ collections:
               - { label: Slogan, name: slogan, widget: string }
               - { label: Tekst, name: tekst, widget: text }
               - { label: Knoptekst, name: knop, widget: string }
+              - { label: Knoptekst 'Ontdek' (naar de eigen pagina), name: meer, widget: string, required: false }
 
           - label: Project – Antwoorden Adviesdrogisterij.nl
             name: antwoorden

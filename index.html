@@ -156,6 +156,11 @@ a{color:inherit}
 .restavia .tag.status{background:#F3D9A6;color:#4A3205}
 .restavia .slogan{color:#3F6B67}
 .restavia .cta{background:var(--restavia-ink);color:#EEF4F2}
+.feat .cta{margin-right:.5rem}
+.feat .more{position:relative;z-index:4;display:inline-flex;align-items:center;gap:.45rem;margin:1.4rem 0 0;padding:.55rem 1.05rem;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;border:1.5px solid currentColor;color:inherit}
+.feat .more:hover{background:rgba(255,255,255,.14)}
+.restavia .more:hover{background:rgba(36,70,90,.1)}
+.feat .more:focus-visible{outline:3px solid var(--resin);outline-offset:3px}
 
 /* zakelijk praktijkvoorbeeld */
 .biz{position:relative;margin-top:1.25rem;border-radius:var(--radius);background:#17211D;color:#ECE6DA;display:grid;gap:2rem;padding:1.75rem;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
@@ -547,6 +552,7 @@ footer p{margin:0}
             <p class="slogan">{{ t.atempo.slogan | escape }}</p>
             <p class="desc">{{ t.atempo.tekst | escape }}</p>
             <span class="cta" aria-hidden="true">{{ t.atempo.knop | escape }} <span class="arr">→</span></span>
+            <a class="more" href="https://apps.domeinstam.nl/atempo/">{{ t.atempo.meer | escape }} <span aria-hidden="true">→</span></a>
           </div>
           <figure class="phone"><img src="img/atempo.jpg?v=3" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Atempo op een telefoon: het scherm Vandaag met de Atempo Coach."></figure>
         </article>
@@ -554,10 +560,11 @@ footer p{margin:0}
         <article class="feat restavia reveal">
           <div class="feat-text">
             <ul class="tags"><li class="tag">{{ t.restavia.label | escape }}</li><li class="tag status">{{ t.restavia.status | escape }}</li></ul>
-            <h3><a href="https://app.phytoforsan.nl/">{{ t.restavia.naam | escape }}</a></h3>
+            <h3><a href="https://restavia.web.app/">{{ t.restavia.naam | escape }}</a></h3>
             <p class="slogan">{{ t.restavia.slogan | escape }}</p>
             <p class="desc">{{ t.restavia.tekst | escape }}</p>
             <span class="cta" aria-hidden="true">{{ t.restavia.knop | escape }} <span class="arr">→</span></span>
+            <a class="more" href="https://apps.domeinstam.nl/restavia/">{{ t.restavia.meer | escape }} <span aria-hidden="true">→</span></a>
           </div>
           <figure class="phone"><img src="img/restavia.jpg" width="585" height="1170" loading="lazy" decoding="async" alt="Schermafbeelding van Restavia op een telefoon: het beginscherm met de vraag hoe je je vandaag voelt."></figure>
         </article>
